@@ -1,3 +1,8 @@
 <template>
-    <h1>Main Page</h1>
+  <div>
+    <the-header></the-header>
+  </div>
 </template>
+
+
+

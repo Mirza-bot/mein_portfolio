@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="icon ml5 mt2 pb2">
+    <div class="icon ml5 mt2 pb2" @click="$router.push('main')">
       <h1>Malkoc Mirza</h1>
       <p>
         <w-icon class="mr1" xl color="black"> mdi mdi-monitor-cellphone </w-icon
@@ -10,17 +10,32 @@
     <div class="nav__links ma6" v-if="!mobileMenu">
       <ul>
         <li>
-          <w-button class="mx10" bg-color="$mainColor" outline xl
+          <w-button
+            class="mx10"
+            bg-color="$mainColor"
+            outline
+            xl
+            @click="$router.push('contact')"
             ><a class="title1 pa5">Kontakt</a></w-button
           >
         </li>
         <li>
-          <w-button class="mx10" bg-color="$mainColor" outline xl
+          <w-button
+            class="mx10"
+            bg-color="$mainColor"
+            outline
+            xl
+            @click="$router.push('aboutme')"
             ><a class="title1 pa5">Über Mich</a></w-button
           >
         </li>
         <li>
-          <w-button class="mx10" bg-color="$mainColor" outline xl
+          <w-button
+            class="mx10"
+            bg-color="$mainColor"
+            outline
+            xl
+            @click="$router.push('resumee')"
             ><a class="title1 pa5">Lebenslauf</a></w-button
           >
         </li>
@@ -41,14 +56,14 @@
               >
             </div>
             <div class="box">
-              <w-button color="primary" outline xl
+              <w-button color="primary" outline xl @click="$router.push('contact')"
                 ><w-icon xl color="black"> mdi mdi-email </w-icon>
               </w-button>
               <br />
               <span>Kontakt</span>
             </div>
             <div class="box">
-              <w-button color="primary" outline xl
+              <w-button color="primary" outline xl @click="$router.push('aboutme')"
                 ><w-icon xl color="black">
                   mdi mdi-head-question-outline
                 </w-icon></w-button
@@ -57,7 +72,7 @@
               <span>Über Mich</span>
             </div>
             <div class="box">
-              <w-button color="primary" outline xl
+              <w-button color="primary" outline xl @click="$router.push('resumee')"
                 ><w-icon xl color="black">
                   mdi mdi-badge-account-outline
                 </w-icon></w-button
@@ -68,11 +83,11 @@
             <div class="box">
               <ul>
                 <li>
-                  <w-icon xl color="black"> mdi mdi-github </w-icon><br>
+                  <w-icon xl color="black"> mdi mdi-github </w-icon><br />
                   <span>GitHub</span>
                 </li>
                 <li>
-                  <w-icon xl color="black"> mdi mdi-linkedin </w-icon><br>
+                  <w-icon xl color="black"> mdi mdi-linkedin </w-icon><br />
                   <span>LinkedIn</span>
                 </li>
               </ul>
@@ -111,7 +126,6 @@ export default {
 
 header {
   background: $mainGradient;
-  height: auto;
   box-shadow: 0px 10px 10px black;
 }
 div.icon {

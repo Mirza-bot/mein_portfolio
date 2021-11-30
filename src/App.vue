@@ -1,24 +1,19 @@
 <template>
   <w-app>
-    <the-header></the-header>
     <main>
-      <router-view></router-view>
+      <transition>
+        <router-view></router-view>
+      </transition>
     </main>
   </w-app>
 </template>
 
 <script>
-
-import TheHeader from './components/layout/TheHeader.vue';
+import TheHeader from "./components/layout/TheHeader.vue";
 export default {
   components: { TheHeader },
   setup() {
-
-    return {
-      
-    };
+    return {};
   },
-
 };
 </script>
-
