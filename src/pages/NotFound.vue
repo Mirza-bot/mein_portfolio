@@ -7,14 +7,13 @@
 
 
 <script>
-import { onMounted, onUnmounted } from '@vue/runtime-core'
+import { onMounted } from '@vue/runtime-core'
 import router from '../routes/router'
 export default {
     setup() {
         onMounted(() => {
             setTimeout(() => {
-                router.push('main')
-                console.log("REDIRECTED!")
+                router.push('main/projects')
             }, 3000)
         })
     },

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="icon ml5 mt2 pb2" @click="$router.push('main')">
+    <div class="icon ml5 mt2 pb2" @click="redirect('main/projects')">
       <h1>Malkoc Mirza</h1>
       <p>
         <w-icon class="mr1" xl color="black"> mdi mdi-monitor-cellphone </w-icon
@@ -15,7 +15,7 @@
             bg-color="$mainColor"
             outline
             xl
-            @click="$router.push('contact')"
+            @click="redirect('main/contact')"
             ><a class="title1 pa5">Kontakt</a></w-button
           >
         </li>
@@ -25,7 +25,7 @@
             bg-color="$mainColor"
             outline
             xl
-            @click="$router.push('aboutme')"
+            @click="redirect('main/aboutme')"
             ><a class="title1 pa5">Über Mich</a></w-button
           >
         </li>
@@ -35,7 +35,7 @@
             bg-color="$mainColor"
             outline
             xl
-            @click="$router.push('resumee')"
+            @click="redirect('main/resumee')"
             ><a class="title1 pa5">Lebenslauf</a></w-button
           >
         </li>
@@ -56,14 +56,22 @@
               >
             </div>
             <div class="box">
-              <w-button color="primary" outline xl @click="$router.push('contact')"
+              <w-button
+                color="primary"
+                outline
+                xl
+                @click="redirect('main/contact')"
                 ><w-icon xl color="black"> mdi mdi-email </w-icon>
               </w-button>
               <br />
               <span>Kontakt</span>
             </div>
             <div class="box">
-              <w-button color="primary" outline xl @click="$router.push('aboutme')"
+              <w-button
+                color="primary"
+                outline
+                xl
+                @click="redirect('main/aboutme')"
                 ><w-icon xl color="black">
                   mdi mdi-head-question-outline
                 </w-icon></w-button
@@ -72,7 +80,11 @@
               <span>Über Mich</span>
             </div>
             <div class="box">
-              <w-button color="primary" outline xl @click="$router.push('resumee')"
+              <w-button
+                color="primary"
+                outline
+                xl
+                @click="redirect('main/resumee')"
                 ><w-icon xl color="black">
                   mdi mdi-badge-account-outline
                 </w-icon></w-button
@@ -101,6 +113,7 @@
 
 <script>
 import { computed, ref } from "@vue/reactivity";
+import router from "../../routes/router";
 export default {
   setup() {
     let mobile = ref(window.matchMedia("(max-width: 1200px)"));
@@ -118,6 +131,12 @@ export default {
       openDrawer: false,
     };
   },
+  methods: {
+    redirect(route) {
+      router.push(route);
+      this.openDrawer = false;
+    },
+  },
 };
 </script>
 
@@ -126,13 +145,22 @@ export default {
 
 header {
   background: $mainGradient;
-  box-shadow: 0px 10px 10px black;
 }
 div.icon {
   font-family: "Bebas Neue", cursive;
   color: black;
   text-shadow: -6px 4px 3px rgb(214, 121, 0);
   display: inline-block;
+  caret-color: transparent;
+  :hover {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -ms-user-select: none;
+  }
 }
 
 div.nav__links {
@@ -160,6 +188,7 @@ div.box {
   text-align: center;
   margin: 5vh 2vw 5vw 2vw;
   font-family: "Roboto Condensed", sans-serif;
+  color: black;
   ul {
     list-style: none;
     li {
