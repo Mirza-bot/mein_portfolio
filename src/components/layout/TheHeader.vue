@@ -7,36 +7,40 @@
         >Web-Developer/Front-End-Developer
       </p>
     </div>
+    <div class="other__links ml10" v-if="!mobileMenu">
+      <div class="github__link">
+        <a href="https://github.com/Mirza-bot" target="_blank">
+        <w-icon xl color="black my3 ml2"> mdi mdi-github </w-icon
+        ><span>GitHub</span><br />
+        </a>
+      </div>
+      <div class="linkedin__link">
+      <a href="https://www.linkedin.com/in/mirza-malkoc-508470218/" target="_blank">
+        <w-icon xl color="black my1 ml2"> mdi mdi-linkedin </w-icon
+        ><span>LinkedIn</span><br />
+      </a>
+      </div>
+    </div>
     <div class="nav__links ma6" v-if="!mobileMenu">
       <ul>
         <li>
-          <w-button
-            class="mx10"
-            bg-color="$mainColor"
-            outline
-            xl
-            @click="redirect('main/contact')"
-            ><a class="title1 pa5">Kontakt</a></w-button
+          <w-button class="mr5 py5" outline s @click="redirect('main/projects')"
+            ><a class="title1">Projekte</a></w-button
           >
         </li>
         <li>
-          <w-button
-            class="mx10"
-            bg-color="$mainColor"
-            outline
-            xl
-            @click="redirect('main/aboutme')"
-            ><a class="title1 pa5">Über Mich</a></w-button
+          <w-button class="mx5 py5" outline s @click="redirect('main/contact')"
+            ><a class="title1">Kontakt</a></w-button
           >
         </li>
         <li>
-          <w-button
-            class="mx10"
-            bg-color="$mainColor"
-            outline
-            xl
-            @click="redirect('main/resumee')"
-            ><a class="title1 pa5">Lebenslauf</a></w-button
+          <w-button class="mx5 py5" outline s @click="redirect('main/aboutme')"
+            ><a class="title1">Über Mich</a></w-button
+          >
+        </li>
+        <li>
+          <w-button class="mx5 py5" outline s @click="redirect('main/resumee')"
+            ><a class="title1">Lebenslauf</a></w-button
           >
         </li>
       </ul>
@@ -54,6 +58,17 @@
                   mdi mdi-arrow-left
                 </w-icon></w-button
               >
+            </div>
+            <div class="box">
+              <w-button
+                color="primary"
+                outline
+                xl
+                @click="redirect('main/projects')"
+                ><w-icon xl color="black"> mdi mdi-table-settings </w-icon>
+              </w-button>
+              <br />
+              <span>Projekte</span>
             </div>
             <div class="box">
               <w-button
@@ -95,12 +110,16 @@
             <div class="box">
               <ul>
                 <li>
+                  <a href="https://github.com/Mirza-bot" target="_blank">
                   <w-icon xl color="black"> mdi mdi-github </w-icon><br />
                   <span>GitHub</span>
+                  </a>
                 </li>
                 <li>
+                  <a href="https://www.linkedin.com/in/mirza-malkoc-508470218/" target="_blank">
                   <w-icon xl color="black"> mdi mdi-linkedin </w-icon><br />
                   <span>LinkedIn</span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -116,7 +135,7 @@ import { computed, ref } from "@vue/reactivity";
 import router from "../../routes/router";
 export default {
   setup() {
-    let mobile = ref(window.matchMedia("(max-width: 1200px)"));
+    let mobile = ref(window.matchMedia("(max-width: 1120px)"));
 
     const mobileMenu = computed(() => {
       return mobile.value.matches;
@@ -176,6 +195,19 @@ div.nav__links {
   }
 }
 
+div.other__links {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: black;
+  font-family: "Roboto Condensed", sans-serif;
+  div {
+    :hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+}
+
 .mobile__menu {
   float: right;
 }
@@ -186,13 +218,16 @@ div.nav__links {
 
 div.box {
   text-align: center;
-  margin: 5vh 2vw 5vw 2vw;
+  margin: 3vh 2vw 5vw 2vw;
   font-family: "Roboto Condensed", sans-serif;
   color: black;
   ul {
     list-style: none;
     li {
       margin: 40px 0 20px 0;
+      a{
+        color: black;
+      }
     }
   }
 }

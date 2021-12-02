@@ -33,7 +33,7 @@ div.image__container {
   -webkit-text-stroke: 1px black;
   font-family: "Bebas Neue", cursive;
   background-image: linear-gradient(rgba(0, 0, 0, 0.883), rgba(0, 0, 0, 0.602)),
-    url("../images/james-harrison-vpOeXr5wmR4-unsplash.jpg");
+    url("../images/james-harrison-vpOeXr5wmR4-unsplash.webp");
   background-position: center;
   filter: saturate(1.8);
   background-size: cover;
