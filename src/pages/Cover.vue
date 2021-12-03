@@ -33,7 +33,7 @@ div.image__container {
   -webkit-text-stroke: 1px black;
   font-family: "Bebas Neue", cursive;
   background-image: linear-gradient(rgba(0, 0, 0, 0.883), rgba(0, 0, 0, 0.602)),
-    url("../images/james-harrison-vpOeXr5wmR4-unsplash.webp");
+    url("../images/cover.webp");
   background-position: center;
   filter: saturate(1.8);
   background-size: cover;
@@ -58,7 +58,7 @@ div.image__container {
     h1 {
       font-family: "Bebas Neue", cursive;
       span {
-        font-family: "Roboto Condensed", sans-serif;
+        font-family: "Roboto Condensed";
         color: white;
         -webkit-text-stroke: 2px black;
         font-size: 4rem;
@@ -66,7 +66,7 @@ div.image__container {
     }
     h2 {
       color: white;
-      font-family: "Roboto Condensed", sans-serif;
+      font-family: "Roboto Condensed";
       font-size: 4rem;
       -webkit-text-stroke: 2px black;
       @media only screen and (max-width: 1100px) {

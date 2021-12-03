@@ -43,7 +43,8 @@
           <w-input
             class="mb5"
             label="Telefon-Nr.:"
-            type="number"
+            type="tel"
+            pattern="[0-9]*"
             name="phoneNumber"
             bg-color="orange-light4"
             outline
@@ -92,6 +93,7 @@ export default {
       clientEmail: "",
       clientNumber: "",
       clientMessage: "",
+      date: "",
     },
     sendSuccesful: false,
   }),
@@ -110,6 +112,7 @@ export default {
       } else return true;
     },
     async submitForm() {
+      this.clientData.date = this.getDate();
       if (this.checkForm() === false) return;
       else {
         const response = await fetch(
@@ -126,8 +129,20 @@ export default {
           const error = new Error(responseData.message || "Failed to post!");
           throw error;
         }
-        this.sendSuccesful = true
+        this.sendSuccesful = true;
       }
+    },
+    getDate() {
+      const today = new Date();
+      const date =
+        today.getDate() +
+        "." +
+        (today.getMonth() + 1) +
+        "." +
+        today.getFullYear();
+      const time = today.getHours() + ":" + today.getMinutes();
+      const timeData = time + " / " + date;
+      return timeData;
     },
   },
 };
