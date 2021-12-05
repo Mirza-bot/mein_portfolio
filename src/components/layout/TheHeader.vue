@@ -9,38 +9,48 @@
     </div>
     <div class="other__links ml10" v-if="!mobileMenu">
       <div class="github__link">
-        <a href="https://github.com/Mirza-bot" target="_blank">
-        <w-icon xl color="black my3 ml2"> mdi mdi-github </w-icon
-        ><span>GitHub</span><br />
+        <a href="https://github.com/Mirza-bot" rel="noopener" target="_blank">
+          <w-icon xl color="black my3 ml2"> mdi mdi-github </w-icon
+          ><span>GitHub</span><br />
         </a>
       </div>
       <div class="linkedin__link">
-      <a href="https://www.linkedin.com/in/mirza-malkoc-508470218/" target="_blank">
-        <w-icon xl color="black my1 ml2"> mdi mdi-linkedin </w-icon
-        ><span>LinkedIn</span><br />
-      </a>
+        <a
+          href="https://www.linkedin.com/in/mirza-malkoc-508470218/"
+          rel="noopener"
+          target="_blank"
+        >
+          <w-icon xl color="black my1 ml2"> mdi mdi-linkedin </w-icon
+          ><span>LinkedIn</span><br />
+        </a>
       </div>
     </div>
     <div class="nav__links ma6" v-if="!mobileMenu">
       <ul>
         <li>
           <w-button class="mr5 py5" outline s @click="redirect('main/projects')"
-            ><a class="title1">Projekte</a></w-button
+            ><span class="title1"
+              ><w-icon xl color="black" class="mt-1 mr1">
+                mdi mdi-table-settings </w-icon
+              >Projekte</span
+            ></w-button
           >
         </li>
         <li>
           <w-button class="mx5 py5" outline s @click="redirect('main/contact')"
-            ><a class="title1">Kontakt</a></w-button
+            ><span class="title1"
+              ><w-icon xl color="black" class="mt-1 mr1"> mdi mdi-email </w-icon
+              >Kontakt</span
+            ></w-button
           >
         </li>
         <li>
           <w-button class="mx5 py5" outline s @click="redirect('main/aboutme')"
-            ><a class="title1">Über Mich</a></w-button
-          >
-        </li>
-        <li>
-          <w-button class="mx5 py5" outline s @click="redirect('main/resumee')"
-            ><a class="title1">Lebenslauf</a></w-button
+            ><span class="title1"
+              ><w-icon xl color="black" class="mt-2 mr1">
+                mdi mdi-badge-account-outline </w-icon
+              >Über Mich</span
+            ></w-button
           >
         </li>
       </ul>
@@ -88,37 +98,32 @@
                 xl
                 @click="redirect('main/aboutme')"
                 ><w-icon xl color="black">
-                  mdi mdi-head-question-outline
+                  mdi mdi-badge-account-outline
                 </w-icon></w-button
               >
               <br />
               <span>Über Mich</span>
             </div>
             <div class="box">
-              <w-button
-                color="primary"
-                outline
-                xl
-                @click="redirect('main/resumee')"
-                ><w-icon xl color="black">
-                  mdi mdi-badge-account-outline
-                </w-icon></w-button
-              >
-              <br />
-              <span>Lebenslauf</span>
-            </div>
-            <div class="box">
               <ul>
                 <li>
-                  <a href="https://github.com/Mirza-bot" target="_blank">
-                  <w-icon xl color="black"> mdi mdi-github </w-icon><br />
-                  <span>GitHub</span>
+                  <a
+                    href="https://github.com/Mirza-bot"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <w-icon xl color="black"> mdi mdi-github </w-icon><br />
+                    <span>GitHub</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/mirza-malkoc-508470218/" target="_blank">
-                  <w-icon xl color="black"> mdi mdi-linkedin </w-icon><br />
-                  <span>LinkedIn</span>
+                  <a
+                    href="https://www.linkedin.com/in/mirza-malkoc-508470218/"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    <w-icon xl color="black"> mdi mdi-linkedin </w-icon><br />
+                    <span>LinkedIn</span>
                   </a>
                 </li>
               </ul>
@@ -164,6 +169,10 @@ export default {
 
 header {
   background: $mainGradient;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 100;
 }
 div.icon {
   font-family: "Bebas Neue", cursive;
@@ -225,7 +234,7 @@ div.box {
     list-style: none;
     li {
       margin: 40px 0 20px 0;
-      a{
+      a {
         color: black;
       }
     }

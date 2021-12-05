@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <div class="page__title" v-if="!sendSuccesful">
       <h1>Kontaktieren Sie mich.</h1>
       <br />
@@ -149,8 +149,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-div {
+div.page {
   font-family: "Roboto Condensed", sans-serif;
+  margin: 15vh auto;
 }
 
 div.page__title {

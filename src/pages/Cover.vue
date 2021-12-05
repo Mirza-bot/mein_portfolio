@@ -1,22 +1,22 @@
 <template>
   <section>
-    <div class="image__container">
-      <div class="front__font">
-        <h1>Malkoc Mirza</h1>
-        <h2>Entwickler-Portfolio</h2>
+      <div class="image__container">
+        <div class="front__font">
+          <h1>Malkoc Mirza</h1>
+          <h2>Entwickler-Portfolio</h2>
+        </div>
+        <div class="front__button">
+          <w-button
+            class="ma1"
+            color="white"
+            bg-color="warning-light1"
+            shadow
+            xl
+            @click="$router.push('main/projects')"
+            >Portfolio öffnen
+          </w-button>
+        </div>
       </div>
-      <div class="front__button">
-        <w-button
-          class="ma1"
-          color="white"
-          bg-color="warning-light1"
-          shadow
-          xl
-          @click="$router.push('main/projects')"
-          >Portfolio öffnen
-        </w-button>
-      </div>
-    </div>
   </section>
 </template>
 
@@ -31,7 +31,7 @@ div.image__container {
   text-align: center;
   font-size: 4rem;
   -webkit-text-stroke: 1px black;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue";
   background-image: linear-gradient(rgba(0, 0, 0, 0.883), rgba(0, 0, 0, 0.602)),
     url("../images/cover.webp");
   background-position: center;
@@ -56,7 +56,7 @@ div.image__container {
     user-select: none;
     -ms-user-select: none;
     h1 {
-      font-family: "Bebas Neue", cursive;
+      font-family: "Bebas Neue";
       span {
         font-family: "Roboto Condensed";
         color: white;
