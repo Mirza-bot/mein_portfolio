@@ -13,7 +13,7 @@ export default {
     setup() {
         onMounted(() => {
             setTimeout(() => {
-                router.push('main/projects')
+                router.push('main/welcome')
             }, 3000)
         })
     },

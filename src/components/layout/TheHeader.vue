@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="icon ml5 mt2 pb2" @click="redirect('main/projects')">
+    <div class="icon ml5 mt2 pb2" @click="redirect('main/welcome')">
       <h1>Malkoc Mirza</h1>
       <p>
         <w-icon class="mr1" xl color="black"> mdi mdi-monitor-cellphone </w-icon

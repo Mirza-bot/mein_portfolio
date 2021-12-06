@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 //Pages
-import Cover from "../pages/Cover.vue";
+import Welcome from "../pages/Welcome.vue";
 import MainPage from "../pages/MainPage.vue";
 import Projects from "../pages/Projects.vue";
 import AboutMe from "../pages/AboutMe.vue";
@@ -12,12 +12,12 @@ import Admin from "../pages/Admin.vue"
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/", redirect: "/cover" },
-    { path: "/cover", component: Cover },
+    { path: "/", redirect: "/welcome" },
     {
       path: "/main",
       component: MainPage,
       children: [
+        { path: "/welcome", component: Welcome },
         { path: "/contact", component: ContactMe  },
         { path: "/aboutme", component: AboutMe  },
         { path: "/projects", component: Projects},

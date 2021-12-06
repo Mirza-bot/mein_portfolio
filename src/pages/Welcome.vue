@@ -1,0 +1,104 @@
+<template>
+  <section>
+    <div class="image__container">
+      <div class="front__font">
+        <h1 class="headline">Herausragende UI-Designs</h1>
+        <h2 class="title2">Einzigartige Benutzererfahrung</h2>
+      </div>
+      <div class="front__button">
+        <w-button
+          class="ma1"
+          color="black"
+          bg-color="orange-light2"
+          shadow
+          xl
+          @click="$router.push('main/projects')"
+          >Projekte
+        </w-button>
+      </div>
+    </div>
+  </section>
+</template>
+
+<style lang="scss" scoped>
+@import "../assets/styles";
+div.image__container {
+  height: 100vh;
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  margin-top: 8vh;
+  color: $mainColor;
+  text-align: center;
+  font-family: "Roboto Condensed";
+  background-image: linear-gradient(
+      90deg,
+      rgb(0, 0, 0) 3%,
+      rgba(0, 0, 0, 0.623) 50%,
+      rgb(0, 0, 0) 97%
+    ),
+    url("../images/cover.webp");
+  background-position: center;
+  filter: saturate(1.8);
+  background-size: cover;
+  background-color: rgba($color: #000000, $alpha: 1.6);
+
+  @media only screen and (max-width: 1100px) {
+    font-size: 2rem;
+  }
+
+  div.front__font {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    caret-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -ms-user-select: none;
+    @media only screen and (max-width: 1100px) {
+      left: 50%;
+    }
+
+    h1 {
+      color: white;
+      animation: fadeDown 1s ease forwards;
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+      animation: fadeUp 1s ease forwards;
+    }
+  }
+
+  div.front__button {
+    position: absolute;
+    font-size: 0rem;
+    top: 70%;
+    left: 50%;
+    -webkit-text-stroke: 1px white;
+    font-family: Bebas Neue, sans-serif;
+    transform: translate(-50%, -50%) scale(1.8);
+    @media only screen and (max-width: 1100px) {
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+  }
+
+  @keyframes fadeDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+}
+</style>
