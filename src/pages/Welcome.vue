@@ -2,8 +2,8 @@
   <section>
     <div class="image__container">
       <div class="front__font">
-        <h1 class="headline">Herausragende UI-Designs</h1>
-        <h2 class="title2">Einzigartige Benutzererfahrung</h2>
+        <h1 class="headline">Einzigartige UI-Designs</h1>
+        <h2 class="title2">Herausragende Benutzererfahrung</h2>
       </div>
       <div class="front__button">
         <w-button

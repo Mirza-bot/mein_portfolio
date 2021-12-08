@@ -37,19 +37,19 @@
           >
         </li>
         <li>
-          <w-button class="mx5 py5" outline s @click="redirect('main/contact')"
-            ><span class="title1"
-              ><w-icon xl color="black" class="mt-1 mr1"> mdi mdi-email </w-icon
-              >Kontakt</span
-            ></w-button
-          >
-        </li>
-        <li>
           <w-button class="mx5 py5" outline s @click="redirect('main/aboutme')"
             ><span class="title1"
               ><w-icon xl color="black" class="mt-2 mr1">
                 mdi mdi-badge-account-outline </w-icon
               >Über Mich</span
+            ></w-button
+          >
+        </li>
+        <li>
+          <w-button class="mx5 py5" outline s @click="redirect('main/contact')"
+            ><span class="title1"
+              ><w-icon xl color="black" class="mt-1 mr1"> mdi mdi-email </w-icon
+              >Kontakt</span
             ></w-button
           >
         </li>
@@ -85,17 +85,6 @@
                 color="primary"
                 outline
                 xl
-                @click="redirect('main/contact')"
-                ><w-icon xl color="black"> mdi mdi-email </w-icon>
-              </w-button>
-              <br />
-              <span>Kontakt</span>
-            </div>
-            <div class="box">
-              <w-button
-                color="primary"
-                outline
-                xl
                 @click="redirect('main/aboutme')"
                 ><w-icon xl color="black">
                   mdi mdi-badge-account-outline
@@ -103,6 +92,17 @@
               >
               <br />
               <span>Über Mich</span>
+            </div>
+            <div class="box">
+              <w-button
+                color="primary"
+                outline
+                xl
+                @click="redirect('main/contact')"
+                ><w-icon xl color="black"> mdi mdi-email </w-icon>
+              </w-button>
+              <br />
+              <span>Kontakt</span>
             </div>
             <div class="box">
               <ul>
