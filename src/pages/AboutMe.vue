@@ -5,129 +5,17 @@
       <w-divider color="white" class="mb8" />
     </div>
     <w-flex wrap class="text-center">
-      <div class="sm4 mxa my5 px6">
+      <div class="md3 mxa my5 px6" v-for="badge in badges" :key="badge.name">
         <ul>
           <li>
             <img
               class="skill__image bdrs2"
-              src="../images/JavaScript.png"
+              :src="`${badge.img}`"
               alt="Vue.js Icon"
             />
           </li>
           <li class="my2">
-            <span class="title1">JavaScript</span>
-          </li>
-          <li>
-            <p>
-              Die Programmiersprache der Browser. Dank den Neuerungen die mit
-              ES6 dazugekommen sind ist das Schreiben von übersichtlichen und
-              gut strukturiertem Code vereinfacht worden.
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div class="sm4 mxa my5 px6">
-        <ul>
-          <li>
-            <img
-              class="skill__image bdrs2"
-              src="../images/Vuejs_icon.png"
-              alt="Vue.js Icon"
-            />
-          </li>
-          <li class="my2">
-            <span class="title1">Vue.js</span>
-          </li>
-          <li>
-            <p>
-              Vue.js in seiner dritten Version, ist ein ausgezeichnetes
-              JavaScript-Framework das im Zusammenspiel mit Vue-Router, VueX und
-              Nuxt.js ein umfangreiches Toolset bietet um die
-              Front-End-Entwicklung zu erleichtern.
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div class="sm4 mxa my5 px6">
-        <ul>
-          <li>
-            <img
-              class="skill__image bdrs2"
-              src="../images/Sass.png"
-              alt="Vue.js Icon"
-            />
-          </li>
-          <li class="my2">
-            <span class="title1">Sass</span>
-          </li>
-          <li>
-            <p>
-              Ein pre-processor für CSS mit der Möglichkeit JavaScript-Syntax zu
-              verwenden (wie z.B. das Nutzen von Variablen). Sass vereinfacht es
-              das Design auf der gesamten Benutzeroberfläche einheitlich zu
-              gestalten.
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div class="sm4 mxa my5 px6">
-        <ul>
-          <li>
-            <img
-              class="skill__image bdrs2"
-              src="../images/Bootstrap.png"
-              alt="Vue.js Icon"
-            />
-          </li>
-          <li class="my2">
-            <span class="title1">Bootstrap</span>
-          </li>
-          <li>
-            <p>
-              Eines der bekanntesten CSS-Frameworks und definitiv das Framework
-              mit dem höchsten Wiedererkennungswert.
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div class="sm4 mxa my5 px6">
-        <ul>
-          <li>
-            <img
-              class="skill__image bdrs2"
-              src="../images/wave-ui.webp"
-              alt="Vue.js Icon"
-            />
-          </li>
-          <li class="my2">
-            <span class="title1">Wave UI for Vue</span>
-          </li>
-          <li>
-            <p>
-              Ein UI-Framework für Vue.js. Eine gute Wahl für ein Material
-              Design, wenn mit Vue.js gearbeitet wird. Die Ergebnisse sprechen
-              für sich, wie man an dieser Webseite sehen kann.
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div class="sm4 mxa my5 px6">
-        <ul>
-          <li>
-            <img
-              class="skill__image bdrs2"
-              src="../images/SEO.jpg"
-              alt="Vue.js Icon"
-            />
-          </li>
-          <li class="my2">
-            <span class="title1">Onpage SEO</span>
-          </li>
-          <li>
-            <p>
-              Die Suchmaschienen Optimierung während der Entwicklung ist essentieller Bestandteil
-              des Aufbaus einer Online-Präsenz.
-            </p>
+            <span>{{ badge.name }}</span>
           </li>
         </ul>
       </div>
@@ -135,24 +23,61 @@
   </div>
 </template>
 
+<script>
+export default {
+  setup() {
+    const badges = [
+      { name: "JavaScript", img: "./src/images/JavaScript.png" },
+      { name: "Vue.js", img: "./src/images/Vuejs_icon.png" },
+      { name: "Sass", img: "./src/images/Sass.png" },
+      { name: "Bootstrap", img: "./src/images/Bootstrap.png" },
+      { name: "WaveUI(Vue.js)", img: "./src/images/wave-ui.webp" },
+      { name: "Onpage SEO", img: "./src/images/SEO.jpg" },
+      { name: "Git", img: "./src/images/Git-Icon.png" },
+      { name: "Responsive Designs", img: "./src/images/Responsive.png" },
+    ];
+    return {
+      badges,
+    };
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 @import "../assets/styles";
 div.page__container {
-  margin: 15vh 5vw 5vh 5vw;
+  margin: 15vh 10vw 5vh 10vw;
   font-family: "Roboto Condensed", sans-serif;
   h1.headline {
     font-size: 3rem;
     font-weight: 900;
     text-shadow: -3px 3px 3px black;
+      @media only screen and (min-width: 2100px) {
+    font-size: 5rem;
+  }
   }
 }
 
 img.skill__image {
-  width: 100px;
-  height: 100px;
+  width: 5vw;
+  height: 5vw;
+  min-height: 80px;
+  min-width: 80px;
+  max-height: 200px;
+  max-width: 200px;
 }
 
-
+span {
+  font-size: 1.5rem;
+  @media only screen and (max-width: 1100px) {
+    font-size: 1rem;
+    display: inline-block;
+    max-width: 80px;
+  }
+  @media only screen and (min-width: 2100px) {
+    font-size: 3rem;
+  }
+}
 
 ul {
   list-style: none;

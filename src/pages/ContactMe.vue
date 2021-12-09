@@ -152,6 +152,9 @@ export default {
 div.page {
   font-family: "Roboto Condensed", sans-serif;
   margin: 15vh auto;
+  @media only screen and (min-width: 1900px) {
+    font-size: 3rem;
+  }
 }
 
 div.page__title {
@@ -168,10 +171,19 @@ div.form__card {
   background-color: white;
   border: 2px solid;
   border-radius: 10px;
+    @media only screen and (min-width: 1900px) {
+      width: 30%;
+      margin: 20vh auto;
+    transform: scale(2.4);
+  }
 }
 
 .submit__button {
   display: block;
   margin: 5vh auto 2vh auto;
+  transform: scale(1.4);
+  @media only screen and (min-width: 1900px) {
+    transform: scale(1.6);
+  }
 }
 </style>

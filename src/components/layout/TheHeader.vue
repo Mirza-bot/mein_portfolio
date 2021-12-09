@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="icon ml5 mt2 pb2" @click="redirect('main/welcome')">
+    <div class="icon ml5 mt4 pb2" @click="redirect('main/welcome')">
       <h1>Malkoc Mirza</h1>
       <p>
         <w-icon class="mr1" xl color="black"> mdi mdi-monitor-cellphone </w-icon
@@ -25,30 +25,42 @@
         </a>
       </div>
     </div>
-    <div class="nav__links ma6" v-if="!mobileMenu">
+    <div class="nav__links" v-if="!mobileMenu">
       <ul>
         <li>
-          <w-button class="mr5 py5" outline s @click="redirect('main/projects')"
-            ><span class="title1"
-              ><w-icon xl color="black" class="mt-1 mr1">
+          <w-button
+            class="nav__button"
+            outline
+            s
+            @click="redirect('main/projects')"
+            ><span
+              ><w-icon color="black" class="mt-1 mr1">
                 mdi mdi-table-settings </w-icon
               >Projekte</span
             ></w-button
           >
         </li>
         <li>
-          <w-button class="mx5 py5" outline s @click="redirect('main/aboutme')"
-            ><span class="title1"
-              ><w-icon xl color="black" class="mt-2 mr1">
+          <w-button
+            class="nav__button"
+            outline
+            s
+            @click="redirect('main/aboutme')"
+            ><span
+              ><w-icon color="black" class="mt-2 mr1">
                 mdi mdi-badge-account-outline </w-icon
               >Person</span
             ></w-button
           >
         </li>
         <li>
-          <w-button class="mx5 py5" outline s @click="redirect('main/contact')"
-            ><span class="title1"
-              ><w-icon xl color="black" class="mt-1 mr1"> mdi mdi-email </w-icon
+          <w-button
+            class="nav__button"
+            outline
+            s
+            @click="redirect('main/contact')"
+            ><span
+              ><w-icon color="black" class="mt-1 mr1"> mdi mdi-email </w-icon
               >Kontakt</span
             ></w-button
           >
@@ -176,6 +188,13 @@ header {
   width: 100vw;
   top: 0;
   z-index: 100;
+  font-size: 1rem;
+  @media only screen and (min-width: 2100px) {
+    font-size: 2rem;
+  }
+  @media only screen and (max-width: 1100px) {
+    font-size: 0.8rem;
+  }
 }
 div.icon {
   font-family: "Bebas Neue", cursive;
@@ -198,6 +217,24 @@ div.nav__links {
   float: right;
   font-family: "Roboto Condensed", sans-serif;
   color: rgb(0, 0, 0);
+  padding: 2rem;
+  @media only screen and (min-width: 2100px) {
+    margin: 1rem 3rem 1rem 3rem;
+  }
+  .nav__button {
+    padding: 1.1rem;
+    margin-right: 4rem;
+    @media only screen and (min-width: 2100px) {
+    padding: 2rem;
+    margin-right: 6rem;
+  }
+  }
+  span {
+    font-size: 1.7rem;
+    @media only screen and (min-width: 2100px) {
+      font-size: 3rem;
+    }
+  }
   ul {
     list-style-type: none;
     padding: none;
@@ -209,7 +246,6 @@ div.nav__links {
 
 div.other__links {
   display: inline-block;
-  font-size: 0.9rem;
   color: black;
   font-family: "Roboto Condensed", sans-serif;
   div {

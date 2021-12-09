@@ -11,9 +11,8 @@
           color="black"
           bg-color="orange-light2"
           shadow
-          xl
           @click="$router.push('main/projects')"
-          >Projekte
+          ><span> Projekte </span>
         </w-button>
       </div>
     </div>
@@ -67,10 +66,16 @@ div.image__container {
       color: white;
       animation: fadeDown 1.5s ease-in-out forwards;
       font-size: 3rem;
+      @media only screen and (min-width: 1900px) {
+        font-size: 6rem;
+      }
     }
     h2 {
       font-size: 2rem;
       animation: fadeUp 1.5s ease-in-out forwards;
+      @media only screen and (min-width: 1900px) {
+        font-size: 4rem;
+      }
     }
   }
 
@@ -81,9 +86,9 @@ div.image__container {
     left: 50%;
     -webkit-text-stroke: 0.5px white;
     font-family: Bebas Neue, sans-serif;
-    transform: translate(-50%, -50%) scale(1.8);
-    @media only screen and (max-width: 1100px) {
-      transform: translate(-50%, -50%) scale(1.5);
+    transform: translate(-50%, -50%) scale(2);
+    @media only screen and (min-width: 2100px) {
+      transform: scale(4);
     }
   }
 
