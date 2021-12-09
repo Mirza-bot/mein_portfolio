@@ -41,7 +41,7 @@
             ><span class="title1"
               ><w-icon xl color="black" class="mt-2 mr1">
                 mdi mdi-badge-account-outline </w-icon
-              >Über Mich</span
+              >Person</span
             ></w-button
           >
         </li>
@@ -159,6 +159,9 @@ export default {
     redirect(route) {
       router.push(route);
       this.openDrawer = false;
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 270);
     },
   },
 };

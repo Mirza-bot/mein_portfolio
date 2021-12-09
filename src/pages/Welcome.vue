@@ -27,7 +27,7 @@ div.image__container {
   width: 100%;
   display: inline-block;
   position: absolute;
-  margin-top: 8vh;
+  margin-top: 4vh;
   color: $mainColor;
   text-align: center;
   font-family: "Roboto Condensed";
@@ -65,12 +65,12 @@ div.image__container {
 
     h1 {
       color: white;
-      animation: fadeDown 1s ease forwards;
+      animation: fadeDown 1.5s ease-in-out forwards;
       font-size: 3rem;
     }
     h2 {
       font-size: 2rem;
-      animation: fadeUp 1s ease forwards;
+      animation: fadeUp 1.5s ease-in-out forwards;
     }
   }
 
@@ -79,7 +79,7 @@ div.image__container {
     font-size: 0rem;
     top: 70%;
     left: 50%;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 0.5px white;
     font-family: Bebas Neue, sans-serif;
     transform: translate(-50%, -50%) scale(1.8);
     @media only screen and (max-width: 1100px) {
@@ -90,14 +90,14 @@ div.image__container {
   @keyframes fadeDown {
     from {
       opacity: 0;
-      transform: translateY(-30px);
+      transform: translateY(-100px);
     }
   }
 
   @keyframes fadeUp {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(100px);
     }
   }
 }

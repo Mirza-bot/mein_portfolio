@@ -41,7 +41,7 @@
           <li>
             <p>
               Vue.js in seiner dritten Version, ist ein ausgezeichnetes
-              JavaScript-Framework das im Zusammenspiel mit Vue-Router, Vuex und
+              JavaScript-Framework das im Zusammenspiel mit Vue-Router, VueX und
               Nuxt.js ein umfangreiches Toolset bietet um die
               Front-End-Entwicklung zu erleichtern.
             </p>
@@ -116,18 +116,17 @@
           <li>
             <img
               class="skill__image bdrs2"
-              src="../images/Vuejs_icon.png"
+              src="../images/SEO.jpg"
               alt="Vue.js Icon"
             />
           </li>
           <li class="my2">
-            <span class="title1">Vue.js</span>
+            <span class="title1">Onpage SEO</span>
           </li>
           <li>
             <p>
-              Vue.js ist ein ausgezeichnetes JavaScript-Framework das im
-              Zusammenspiel mit Vue-Router, Vuex und Nuxt.js ein umfangreiches
-              Toolset bietet, um die Front-End-Entwicklung zu erleichtern.
+              Die Suchmaschienen Optimierung während der Entwicklung ist essentieller Bestandteil
+              des Aufbaus einer Online-Präsenz.
             </p>
           </li>
         </ul>
@@ -149,9 +148,11 @@ div.page__container {
 }
 
 img.skill__image {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
 }
+
+
 
 ul {
   list-style: none;
