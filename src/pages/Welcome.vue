@@ -2,8 +2,8 @@
   <section>
     <div class="image__container">
       <div class="front__font">
-        <h1 class="headline">Einzigartige UI-Designs</h1>
-        <h2 class="title2">Herausragende Benutzererfahrung</h2>
+        <h1 class="headline"> {{ $t("welcome.headline") }} </h1>
+        <h2 class="title2"> {{ $t("welcome.headline2") }} </h2>
       </div>
       <div class="front__button">
         <w-button
@@ -12,12 +12,13 @@
           bg-color="orange-light2"
           shadow
           @click="$router.push('main/projects')"
-          ><span> Projekte </span>
+          ><span> {{ $t("welcome.button") }}</span>
         </w-button>
       </div>
     </div>
   </section>
 </template>
+
 
 <style lang="scss" scoped>
 @import "../assets/styles";

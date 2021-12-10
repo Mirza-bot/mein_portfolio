@@ -36,7 +36,7 @@
             ><span
               ><w-icon color="black" class="mt-1 mr1">
                 mdi mdi-table-settings </w-icon
-              >Projekte</span
+              >{{ $t("header.projects") }}</span
             ></w-button
           >
         </li>
@@ -61,9 +61,21 @@
             @click="redirect('main/contact')"
             ><span
               ><w-icon color="black" class="mt-1 mr1"> mdi mdi-email </w-icon
-              >Kontakt</span
+              >{{ $t("header.contact") }}</span
             ></w-button
           >
+        </li>
+        <li>
+          <div
+            class="language__selector"
+            @click="setLanguage('en')"
+            v-if="getLanguage"
+          >
+            <img src="../../images/English.svg" alt="english Language Switch" />
+          </div>
+          <div class="language__selector" @click="setLanguage('de')" v-else>
+            <img src="../../images/German.png" alt="english Language Switch" />
+          </div>
         </li>
       </ul>
     </div>
@@ -175,6 +187,15 @@ export default {
         window.scrollTo(0, 0);
       }, 270);
     },
+    setLanguage(lang) {
+      this.$i18n.locale = lang;
+    },
+  },
+  computed: {
+    getLanguage() {
+      if (this.$i18n.locale === "en") return false;
+      else return true;
+    },
   },
 };
 </script>
@@ -225,9 +246,9 @@ div.nav__links {
     padding: 1.1rem;
     margin-right: 4rem;
     @media only screen and (min-width: 2100px) {
-    padding: 2rem;
-    margin-right: 6rem;
-  }
+      padding: 2rem;
+      margin-right: 6rem;
+    }
   }
   span {
     font-size: 1.7rem;
@@ -241,6 +262,20 @@ div.nav__links {
     li {
       float: left;
     }
+  }
+}
+
+div.language__selector {
+  width: 35px;
+  margin: 12% 1rem 0 0;
+  @media only screen and (min-width: 2100px) {
+    width: 70px;
+  }
+  :hover {
+    cursor: pointer;
+  }
+  img {
+    width: 100%;
   }
 }
 
