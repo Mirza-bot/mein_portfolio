@@ -103,7 +103,7 @@
                 </w-icon></w-button
               >
               <br />
-              <span>Über Mich</span>
+              <span>Person</span>
             </div>
             <div class="box">
               <w-button

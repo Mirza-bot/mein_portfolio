@@ -1,6 +1,6 @@
 <template>
   <div class="page__container">
-    <div class="page__header">
+    <div>
       <h1 class="headline">Erfahrung in</h1>
       <w-divider color="white" class="mb8" />
     </div>
@@ -20,6 +20,10 @@
         </ul>
       </div>
     </w-flex>
+    <div class="mt10">
+      <h1 class="headline">Zur Person</h1>
+      <w-divider color="white" class="mb8" />
+    </div>
   </div>
 </template>
 
@@ -52,9 +56,9 @@ div.page__container {
     font-size: 3rem;
     font-weight: 900;
     text-shadow: -3px 3px 3px black;
-      @media only screen and (min-width: 2100px) {
-    font-size: 5rem;
-  }
+    @media only screen and (min-width: 2100px) {
+      font-size: 5rem;
+    }
   }
 }
 

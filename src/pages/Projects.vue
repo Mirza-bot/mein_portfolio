@@ -135,7 +135,7 @@
       <div>
         <span class="headline mb2">Lohnberechnungs-App (Schichtarbeit)</span>
         <w-card class="mt3" no-border>
-          <img :src="projectImg3" class="mobile__gif" />
+          <img :src="projectImg3" class="mobile__gif sh6" alt="lohnrechnerdemo_bild" />
           <br />
           <span class="title2">Beschreibung:</span><br /><br />
           Diese Web-App dient dazu den Monatslohn anhand des Stundenlohns, unter
@@ -279,7 +279,7 @@ img.mobile__gif {
   margin: auto auto auto 30vw;
   max-width: 20vw;
   border: 2px solid black;
-  border-radius: 60px;
+  border-radius: 50px;
   @media only screen and (max-width: 1100px) {
     margin: auto auto 5vh 10vw;
     max-width: 60vw;
