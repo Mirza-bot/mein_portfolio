@@ -27,7 +27,7 @@ div.image__container {
   width: 100%;
   display: inline-block;
   position: absolute;
-  margin-top: 4vh;
+  margin-top: 10vh;
   color: $mainColor;
   text-align: center;
   font-family: "Roboto Condensed";
@@ -45,6 +45,9 @@ div.image__container {
 
   @media only screen and (max-width: 1100px) {
     font-size: 2rem;
+  }
+  @media only screen and (min-width: 2100px) {
+    margin-top: 8vh;
   }
 
   div.front__font {
@@ -85,7 +88,7 @@ div.image__container {
     font-size: 0rem;
     top: 70%;
     left: 50%;
-    -webkit-text-stroke: 0.5px white;
+    -webkit-text-stroke: 0.3px white;
     font-family: Bebas Neue, sans-serif;
     transform: translate(-50%, -50%) scale(2);
     @media only screen and (min-width: 2100px) {

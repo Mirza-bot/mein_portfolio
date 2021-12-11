@@ -24,6 +24,9 @@
       <h1 class="headline">Zur Person</h1>
       <w-divider color="white" class="mb8" />
     </div>
+    <div class="person__details">
+      <img class="person__image bdrsm" src="../images/Mirza.webp" alt="Portfolio Picture">
+    </div>
   </div>
 </template>
 
@@ -60,6 +63,13 @@ div.page__container {
       font-size: 5rem;
     }
   }
+}
+
+img.person__image {
+  width: 15vw;
+  @media only screen and (max-width: 1100px) {
+      width: 30vw;
+    }
 }
 
 img.skill__image {

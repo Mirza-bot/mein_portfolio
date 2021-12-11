@@ -31,7 +31,7 @@
           <w-button
             class="nav__button"
             outline
-            s
+            color="black"
             @click="redirect('main/projects')"
             ><span
               ><w-icon color="black" class="mt-1 mr1">
@@ -44,7 +44,7 @@
           <w-button
             class="nav__button"
             outline
-            s
+            color="black"
             @click="redirect('main/aboutme')"
             ><span
               ><w-icon color="black" class="mt-2 mr1">
@@ -57,7 +57,7 @@
           <w-button
             class="nav__button"
             outline
-            s
+            color="black"
             @click="redirect('main/contact')"
             ><span
               ><w-icon color="black" class="mt-1 mr1"> mdi mdi-email </w-icon
@@ -80,7 +80,7 @@
       </ul>
     </div>
     <div class="mobile__menu my6 mx4" v-else>
-      <w-button class="py5" @click="openDrawer = true" outline>
+      <w-button class="py5" @click="openDrawer = true" outline aria-label="Menu">
         <w-icon xl color="black"> mdi mdi-menu </w-icon>
       </w-button>
       <w-drawer v-model="openDrawer" width="30vw" bg-color="black">
@@ -95,18 +95,18 @@
             </div>
             <div class="box">
               <w-button
-                color="primary"
+                color="black"
                 outline
                 xl
                 @click="redirect('main/projects')"
                 ><w-icon xl color="black"> mdi mdi-table-settings </w-icon>
               </w-button>
               <br />
-              <span>Projekte</span>
+              <span>{{ $t("header.projects") }}</span>
             </div>
             <div class="box">
               <w-button
-                color="primary"
+                color="black"
                 outline
                 xl
                 @click="redirect('main/aboutme')"
@@ -119,14 +119,14 @@
             </div>
             <div class="box">
               <w-button
-                color="primary"
+                color="black"
                 outline
                 xl
                 @click="redirect('main/contact')"
                 ><w-icon xl color="black"> mdi mdi-email </w-icon>
               </w-button>
               <br />
-              <span>Kontakt</span>
+              <span>{{ $t("header.contact") }}</span>
             </div>
             <div class="box">
               <ul>
@@ -151,6 +151,24 @@
                   </a>
                 </li>
               </ul>
+            </div>
+            <div class="box">
+              <div
+                class="language__selector"
+                @click="setLanguage('en')"
+                v-if="getLanguage"
+              >
+                <img
+                  src="../../images/English.svg"
+                  alt="english Language Switch"
+                />
+              </div>
+              <div class="language__selector" @click="setLanguage('de')" v-else>
+                <img
+                  src="../../images/German.png"
+                  alt="english Language Switch"
+                />
+              </div>
             </div>
           </w-flex>
         </div>
@@ -234,6 +252,10 @@ div.icon {
   }
 }
 
+a {
+  color:black;
+}
+
 div.nav__links {
   float: right;
   font-family: "Roboto Condensed", sans-serif;
@@ -266,10 +288,20 @@ div.nav__links {
 }
 
 div.language__selector {
-  width: 35px;
-  margin: 12% 1rem 0 0;
+  width: 45px;
+  height: 30px;
+  margin: 8% 1rem 0 0;
+  padding: 3px;
+  border: 1px solid black;
+  border-radius: 3px;
   @media only screen and (min-width: 2100px) {
     width: 70px;
+    height: 48px;
+  }
+  @media only screen and (max-width: 1100px) {
+    width: 40px;
+    height: 28px;
+    margin: 0;
   }
   :hover {
     cursor: pointer;

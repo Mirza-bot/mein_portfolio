@@ -18,6 +18,9 @@ const i18n = createI18n({
               headline: "Einzigartige UI-Designs",
               headline2: "Herausragende Benutzererfahrung",
               button: "Projekte"
+            },
+            projects: {
+              
             }
           },
           en: {

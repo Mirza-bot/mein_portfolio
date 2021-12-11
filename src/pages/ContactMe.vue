@@ -152,7 +152,7 @@ export default {
 div.page {
   font-family: "Roboto Condensed", sans-serif;
   margin: 15vh auto;
-  @media only screen and (min-width: 1900px) {
+  @media only screen and (min-width: 2100px) {
     font-size: 3rem;
   }
 }
@@ -171,7 +171,8 @@ div.form__card {
   background-color: white;
   border: 2px solid;
   border-radius: 10px;
-    @media only screen and (min-width: 1900px) {
+  caret-color: black;
+    @media only screen and (min-width: 2100px) {
       width: 30%;
       margin: 20vh auto;
     transform: scale(2.4);
@@ -182,7 +183,7 @@ div.form__card {
   display: block;
   margin: 5vh auto 2vh auto;
   transform: scale(1.4);
-  @media only screen and (min-width: 1900px) {
+  @media only screen and (min-width: 2100px) {
     transform: scale(1.6);
   }
 }
