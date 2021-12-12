@@ -80,14 +80,14 @@
       </ul>
     </div>
     <div class="mobile__menu my6 mx4" v-else>
-      <w-button class="py5" @click="openDrawer = true" outline aria-label="Menu">
+      <w-button class="py5" @click="openDrawer = true" color="black" outline aria-label="Menu">
         <w-icon xl color="black"> mdi mdi-menu </w-icon>
       </w-button>
       <w-drawer v-model="openDrawer" width="30vw" bg-color="black">
         <div class="grow mx0 mobile__drawer">
           <w-flex column align-center justify-space-between class="wrapper">
             <div class="box">
-              <w-button color="primary" outline xl @click="openDrawer = false"
+              <w-button color="black" outline xl @click="openDrawer = false"
                 ><w-icon xl color="black">
                   mdi mdi-arrow-left
                 </w-icon></w-button
@@ -206,6 +206,7 @@ export default {
       }, 270);
     },
     setLanguage(lang) {
+      this.openDrawer = false;
       this.$i18n.locale = lang;
     },
   },
@@ -228,6 +229,7 @@ header {
   top: 0;
   z-index: 100;
   font-size: 1rem;
+  box-shadow: 0px 4px 4px black;
   @media only screen and (min-width: 2100px) {
     font-size: 2rem;
   }
@@ -328,7 +330,7 @@ div.other__links {
 }
 
 .mobile__drawer {
-  background: $mainColor;
+  background: $mainGradient;
 }
 
 div.box {

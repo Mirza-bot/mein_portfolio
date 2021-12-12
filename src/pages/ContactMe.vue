@@ -1,17 +1,16 @@
 <template>
   <div class="page">
     <div class="page__title" v-if="!sendSuccesful">
-      <h1>Kontaktieren Sie mich.</h1>
+      <h1>{{ $t('contact.headline') }}</h1>
       <br />
       <p>
-        Sie können mir direkt über das Online-Formular schreiben oder Sie
-        kontaktieren mich über
+        {{ $t('contact.textContent1') }}
         <a
           href="https://www.linkedin.com/in/mirza-malkoc-508470218/"
           target="_blank"
         >
           LinkedIn</a
-        >. Ich werde mich um eine schnelle Antwort bemühen.
+        >. {{ $t('contact.textContent2') }}
       </p>
     </div>
     <div class="form__card" v-if="!sendSuccesful">
@@ -42,7 +41,7 @@
           </w-input>
           <w-input
             class="mb5"
-            label="Telefon-Nr.:"
+            label="Tel-Nr.:"
             type="tel"
             pattern="[0-9]*"
             name="phoneNumber"
@@ -56,7 +55,7 @@
             outline
             type="text"
             name="message"
-            placeholder="Nachricht*"
+            :placeholder="$t('contact.messageLabel')"
             bg-color="orange-light4"
             v-model="clientData.clientMessage"
           ></w-textarea>
@@ -65,7 +64,7 @@
             type="submit"
             bg-color="orange-light2"
             @click="submitForm"
-            >Senden</w-button
+            >{{ $t("contact.submitButton") }}</w-button
           >
         </w-form>
       </w-card>

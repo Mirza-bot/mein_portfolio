@@ -1,26 +1,20 @@
 <template>
   <div class="page">
     <div class="page__header">
-      <h2>Projekte</h2>
+      <h2>{{ $t("projects.headline") }}</h2>
       <w-divider color="white" class="my5" />
     </div>
     <div>
       <span class="headline">Kanban-Board-App</span>
       <w-card :image="`${projectImg1}`" class="mt3" no-border>
         <br />
-        <span class="title2">Beschreibung:</span><br /><br />
-        Dies ist eine Web-App welche mittels JavaScript, Vue3, Vue-Router und
-        Vuex erstellt wurde. Als Backend wird Firebase mit ihrer
-        Realtime-Database genutzt, dies ermöglicht Authentifizierungsfunktionen
-        und das Speichern der eigenen "Task-Karten", für jeden Nutzer der sich
-        registriert. Mittels der "Drag & Drop"-API können die Karten zwischen
-        den einzelnen Kategorien verschoben werden. Das Löschen und Editieren
-        der Karten ist ebenfalls möglich.
-        <ul class="my5 description">
-          <li>Responsive: Nein</li>
-          <li>Art: Desktop-Web-Applikation</li>
-        </ul>
-
+        <span class="title2">{{ $t("projects.description") }}</span><br /><br />
+        {{ $t("projects.project1.descriptionContent") }}
+          <br>
+          <br>
+          <span class="description">Responsive: {{ $t("projects.project1.responsive") }}</span>
+          <br>
+          <br>
         <span class="title2">Tools:</span>
         <ul class="mx5">
           <li><w-icon>mdi mdi-language-html5</w-icon>HTML5</li>
@@ -74,17 +68,13 @@
       <span class="headline mb2">Pietros Pizzeria</span>
       <w-card :image="`${projectImg2}`" class="mt3" no-border>
         <br />
-        <span class="title2">Beschreibung:</span><br /><br />
-        Eine simple Pizzeria-Webseite welche mittels JavaScript, Vue.js,
-        Vue-Router und SASS erstellt wurde. Das Design der Hauptseite, sowie der
-        Gallerie wurden mit einem CSS-Grid erstellt um ein symetrisches Layout
-        zu erzielen.
-
-        <ul class="my5 description">
-          <li>Responsive: Ja</li>
-          <li>Art: Webseite</li>
-        </ul>
-
+        <span class="title2">{{ $t("projects.description") }}</span><br /><br />
+          {{ $t("projects.project2.descriptionContent") }}
+          <br>
+          <br>
+          <span class="description">Responsive: {{ $t("projects.project2.responsive") }}</span>
+          <br>
+          <br>
         <span class="title2">Tools:</span>
         <ul class="mx5">
           <li><w-icon l>mdi mdi-language-javascript</w-icon>JavaScript</li>
@@ -133,25 +123,17 @@
       </w-card>
       <w-divider color="white" class="my10" />
       <div>
-        <span class="headline mb2">Lohnberechnungs-App (Schichtarbeit)</span>
+        <span class="headline mb2">{{ $t("projects.project3.title") }}</span>
         <w-card class="mt3" no-border>
           <img :src="projectImg3" class="mobile__gif sh6" alt="lohnrechnerdemo_bild" />
           <br />
-          <span class="title2">Beschreibung:</span><br /><br />
-          Diese Web-App dient dazu den Monatslohn anhand des Stundenlohns, unter
-          Berücksichtigung der gearbeiteten Schicht, zu berechnen. Es werden
-          Schichtzulagen, Überstunden, Gefahren und Schmutzzulagen, sowie
-          Urlaubsstunden und Feiertage zur Berechnung mit einbezogen. Durch
-          Einsatz des Ionic-Frameworks und Vue.js wurde eine Webseite erstellt
-          die gezielt an Mobile-Endgeräte angepasst sein soll, damit so die
-          Berechnung des Monatslohnes einfach und für jeden auch unterwegs
-          möglich gemacht wird.
-
-          <ul class="my5 description">
-            <li>Responsive: Ja</li>
-            <li>Art: Mobile first Web-App</li>
-          </ul>
-
+          <span class="title2">{{ $t("projects.description") }}</span><br /><br />
+          {{ $t("projects.project3.descriptionContent") }}
+          <br>
+          <br>
+          <span class="description">Responsive: {{ $t("projects.project3.responsive") }}</span>
+          <br>
+          <br>
           <span class="title2">Tools:</span>
           <ul class="mx5">
             <li><w-icon>mdi mdi-language-html5</w-icon>HTML5</li>
@@ -187,17 +169,16 @@
       </div>
       <w-divider color="white" class="my10" />
       <div>
-        <span class="headline mb2">Portfolio Webseite</span>
+        <span class="headline mb2">{{ $t("projects.project4.title") }}</span>
         <w-card :image="`${projectImg4}`" class="mt3" no-border>
           <br />
-          <span class="title2">Beschreibung:</span><br /><br />
-          Die Portfolio-Webseite auf der Sie sich befinden wurde mit JavaScript,
-          Vue.js, Vue-Router, Sass und Wave-UI erstellt. 
-          <ul class="my5 description">
-            <li>Responsive: Ja</li>
-            <li>Art: Webseite</li>
-          </ul>
-
+          <span class="title2">{{ $t("projects.description") }}</span><br /><br />
+          {{ $t("projects.project4.descriptionContent") }}
+          <br>
+          <br>
+          <span class="description">Responsive: {{ $t("projects.project4.responsive") }}</span>
+          <br>
+          <br>
           <span class="title2">Tools:</span>
           <ul>
             <li><w-icon l>mdi mdi-language-javascript</w-icon>JavaScript</li>

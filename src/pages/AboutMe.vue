@@ -1,6 +1,50 @@
 <template>
   <div class="page__container">
     <div>
+      <h1 class="headline">Zur Person</h1>
+      <w-divider color="white" class="mb3" />
+    </div>
+    <w-flex wrap class="text-center mt10">
+      <div class="person__container lg3 bdrs4 bd3 sh6 mxa mb5">
+        <img
+          class="person__image bdrsm ma5 bd6 sh5"
+          src="../images/Mirza.webp"
+          alt="Portfolio Picture"
+        />
+        <ul>
+          <li class="ma4 headline text-bold">Malkoc Mirza</li>
+          <li class="ma4 title2 text-bold">Frontend-Webentwickler</li>
+        </ul>
+      </div>
+      <div class="lg2 mxa text-left">
+        <ul class="ml6">
+          <li class="headline text-bold">Details:</li>
+          <li class="title2 my2">Alter: 26</li>
+          <li class="title2 my2">Wohnort: Wien</li>
+          <w-divider color="orange-light2" class="mr10" />
+          <li class="headline text-bold my2">Fähigkeiten:</li>
+          <li class="title2 my2">Analytisches Denken</li>
+          <li class="title2 my2">Ein Auge für Design</li>
+          <li class="title2 my2">Hohe Lernbereitschaft</li>
+          <li class="title2 my2">Teamplayer</li>
+          <li class="title2 my2">Strukturiertes Arbeiten</li>
+          <w-divider color="orange-light2" class="mr10" />
+          <li class="headline text-bold my2">Interessen:</li>
+          <li class="title2 my2">Programmieren</li>
+          <li class="title2 my2">Video- u. Bildbearbeitung</li>
+          <li class="title2 my2">Lesen</li>
+          <li class="title2 my2">Hard- und Software</li>
+          <w-divider color="orange-light2" class="mr10" />
+        </ul>
+      </div>
+      <div class="lg7">
+        <ul>
+          <li class="headline text-bold">Mirza Malkoc</li>
+          <li class="title2">Alter: 26</li>
+        </ul>
+      </div>
+    </w-flex>
+    <div class="mt10">
       <h1 class="headline">Erfahrung in</h1>
       <w-divider color="white" class="mb8" />
     </div>
@@ -20,13 +64,6 @@
         </ul>
       </div>
     </w-flex>
-    <div class="mt10">
-      <h1 class="headline">Zur Person</h1>
-      <w-divider color="white" class="mb8" />
-    </div>
-    <div class="person__details">
-      <img class="person__image bdrsm" src="../images/Mirza.webp" alt="Portfolio Picture">
-    </div>
   </div>
 </template>
 
@@ -38,7 +75,7 @@ export default {
       { name: "Vue.js", img: "./src/images/Vuejs_icon.png" },
       { name: "Sass", img: "./src/images/Sass.png" },
       { name: "Bootstrap", img: "./src/images/Bootstrap.png" },
-      { name: "WaveUI(Vue.js)", img: "./src/images/wave-ui.webp" },
+      { name: "WaveUI (Vue.js)", img: "./src/images/wave-ui.webp" },
       { name: "Onpage SEO", img: "./src/images/SEO.jpg" },
       { name: "Git", img: "./src/images/Git-Icon.png" },
       { name: "Responsive Designs", img: "./src/images/Responsive.png" },
@@ -63,13 +100,6 @@ div.page__container {
       font-size: 5rem;
     }
   }
-}
-
-img.person__image {
-  width: 15vw;
-  @media only screen and (max-width: 1100px) {
-      width: 30vw;
-    }
 }
 
 img.skill__image {
@@ -97,5 +127,24 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.text-center {
+  -webkit-perspective: 500px;
+  -moz-perspective: 500px;
+  -o-perspective: 500px;
+  perspective: 500px;
+}
+div.person__container {
+  background: $mainGradient;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+
+img.person__image {
+  width: 15vw;
+  @media only screen and (max-width: 1100px) {
+    width: 30vw;
+  }
 }
 </style>
