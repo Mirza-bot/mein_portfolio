@@ -12,38 +12,41 @@
           alt="Portfolio Picture"
         />
         <ul>
-          <li class="ma4 headline text-bold">Malkoc Mirza</li>
-          <li class="ma4 title2 text-bold">Frontend-Webentwickler</li>
+          <li class="ma4 text-bold">Malkoc Mirza</li>
+          <li class="ma4 text-bold">{{ $t("aboutMe.jobTitle") }}</li>
         </ul>
       </div>
-      <div class="lg2 mxa text-left">
+      <div class="about_me_skills lg2 mxa text-left">
         <ul class="ml3">
-          <li class="title2 my2">Alter: 26</li>
-          <li class="title2 my2">Wohnort: Wien</li>
+          <li class="my2">{{ $t("aboutMe.age") }}</li>
+          <li class="my2">{{ $t("aboutMe.livingIn") }}</li>
         </ul>
         <w-divider color="blue-light1" class="mx2" />
         <ul class="ml3">
-          <li class="headline text-bold my2">Fähigkeiten:</li>
-          <li class="title2 my2">Analytisches Denken</li>
-          <li class="title2 my2">Hohe Lernbereitschaft</li>
-          <li class="title2 my2">Teamplayer</li>
-          <li class="title2 my2">Strukturiertes Arbeiten</li>
+          <li class="text-bold my2">
+            {{ $t("aboutMe.skills.headline") }}
+          </li>
+          <li class="my2">{{ $t("aboutMe.skills.skill1") }}</li>
+          <li class="my2">{{ $t("aboutMe.skills.skill2") }}</li>
+          <li class="my2">{{ $t("aboutMe.skills.skill3") }}</li>
+          <li class="my2">{{ $t("aboutMe.skills.skill4") }}</li>
         </ul>
         <w-divider color="blue-light1" class="mx2" />
         <ul class="ml3">
-          <li class="headline text-bold my2">Interessen:</li>
-          <li class="title2 my2">Programmieren</li>
-          <li class="title2 my2">Video- u. Bildbearbeitung</li>
-          <li class="title2 my2">Lesen</li>
-          <li class="title2 my2">Hard- und Software</li>
+          <li class="text-bold my2">
+            {{ $t("aboutMe.hobbies.headline") }}
+          </li>
+          <li class="my2">{{ $t("aboutMe.hobbies.hobby1") }}</li>
+          <li class="my2">{{ $t("aboutMe.hobbies.hobby2") }}</li>
+          <li class="my2">{{ $t("aboutMe.hobbies.hobby4") }}</li>
+          <li class="my2">{{ $t("aboutMe.hobbies.hobby3") }}</li>
         </ul>
         <w-divider color="blue-light1" class="mx2" />
       </div>
-      <div class="lg7">
-        <ul>
-          <li class="headline text-bold">Mirza Malkoc</li>
-          <li class="title2">Alter: 26</li>
-        </ul>
+      <div class="about_me_text lg7 px5">
+        <p class="personal__text">
+          {{ $t("aboutMe.personalText") }}
+        </p>
       </div>
     </w-flex>
     <div class="mt10">
@@ -92,6 +95,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/styles";
+
 div.page__container {
   margin: 5vh 10vw 5vh 10vw;
   font-family: "Roboto Condensed", sans-serif;
@@ -142,12 +146,32 @@ div.person__container {
   background: $mainGradient;
   color: white;
   -webkit-text-stroke: 1px black;
+  font-size: 2rem;
+  @media only screen and (min-width: 2100px) {
+    font-size: 4rem;
+  }
 }
 
 img.person__image {
   width: 15vw;
   @media only screen and (max-width: 1100px) {
     width: 30vw;
+  }
+}
+
+div.about_me_skills {
+  font-size: 1.5rem;
+  @media only screen and (min-width: 2100px) {
+    font-size: 3rem;
+  }
+}
+
+p.personal__text {
+  font-size: 1.5rem;
+  border: 2px solid white;
+  padding: 10px;
+  @media only screen and (min-width: 2100px) {
+    font-size: 3rem;
   }
 }
 </style>

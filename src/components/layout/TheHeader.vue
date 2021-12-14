@@ -9,9 +9,8 @@
     </div>
     <div class="other__links ml10" v-if="!mobileMenu">
       <div class="github__link">
-        <a href="https://github.com/Mirza-bot" rel="noopener" target="_blank">
-          <w-icon xl color="white my3 ml2"> mdi mdi-github </w-icon
-          ><span>GitHub</span><br />
+        <a href="https://github.com/Mirza-bot" rel="noopener" target="_blank" aria-label="Github-Link">
+          <w-icon color="white my2"> mdi mdi-github </w-icon>
         </a>
       </div>
       <div class="linkedin__link">
@@ -19,9 +18,14 @@
           href="https://www.linkedin.com/in/mirza-malkoc-508470218/"
           rel="noopener"
           target="_blank"
+          aria-label="Linkedin-Link"
         >
-          <w-icon xl color="white my1 ml2"> mdi mdi-linkedin </w-icon
-          ><span>LinkedIn</span><br />
+          <w-icon color="white my1"> mdi mdi-linkedin </w-icon>
+        </a>
+      </div>
+      <div class="mail__link">
+        <a href="mailto:malkoc.mirza.95@gmail.com" aria-label="E-Mail-Link">
+          <w-icon color="white mt2"> mdi mdi-email </w-icon>
         </a>
       </div>
     </div>
@@ -34,7 +38,7 @@
             color="white"
             @click="redirect('main', '#projects')"
             ><span
-              ><w-icon color="white" lg class="mt-1 mr1">
+              ><w-icon color="white" class="mt-1 mr1">
                 mdi mdi-table-settings </w-icon
               >{{ $t("header.projects") }}</span
             ></w-button
@@ -47,7 +51,7 @@
             color="white"
             @click="redirect('main', '#aboutme')"
             ><span
-              ><w-icon color="white" lg class="mt-2 mr1">
+              ><w-icon color="white" class="mt-2 mr1">
                 mdi mdi-badge-account-outline </w-icon
               >Person</span
             ></w-button
@@ -60,7 +64,8 @@
             color="white"
             @click="redirect('main', '#contactme')"
             ><span
-              ><w-icon color="white" lg class="mt-1 mr1"> mdi mdi-email </w-icon
+              ><w-icon color="white" class="mt-1 mr1">
+                mdi mdi-card-account-mail-outline </w-icon
               >{{ $t("header.contact") }}</span
             ></w-button
           >
@@ -156,6 +161,12 @@
                     <span>LinkedIn</span>
                   </a>
                 </li>
+                <li>
+                  <a href="mailto:malkoc.mirza.95@gmail.com">
+                    <w-icon xl color="white"> mdi mdi-email </w-icon> <br />
+                    <span>E-Mail</span>
+                  </a>
+                </li>
               </ul>
             </div>
             <div class="box">
@@ -209,7 +220,7 @@ export default {
       this.openDrawer = false;
     },
     scrollUp(position) {
-      window.scrollTo({top: position, behavior: "smooth"})
+      window.scrollTo({ top: position, behavior: "smooth" });
     },
     setLanguage(lang) {
       this.openDrawer = false;
@@ -229,14 +240,12 @@ export default {
 @import "../../assets/styles";
 
 header {
-  background: $mainGradient;
+  background: transparent;
   width: 100vw;
   z-index: 100;
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
   top: 0vh;
   font-size: 1rem;
-  box-shadow: 0px 4px 4px black;
   @media only screen and (min-width: 2100px) {
     font-size: 2rem;
   }
@@ -279,6 +288,7 @@ div.nav__links {
     @media only screen and (min-width: 2100px) {
       padding: 2rem;
       margin-right: 6rem;
+      font-size: 2rem;
     }
   }
   span {
@@ -324,6 +334,10 @@ div.other__links {
   display: inline-block;
   color: white;
   font-family: "Roboto Condensed", sans-serif;
+  font-size: 1rem;
+  @media only screen and (min-width: 2100px) {
+    font-size: 2rem;
+  }
   div {
     :hover {
       cursor: pointer;
@@ -349,6 +363,10 @@ div.box {
     list-style: none;
     li {
       margin: 40px 0 20px 0;
+        @media only screen and (max-width: 400px) {
+          font-size: 0.7rem;
+          margin: 15px 0 10px 0
+        }
       a {
         color: white;
       }

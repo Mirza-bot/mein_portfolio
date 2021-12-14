@@ -1,17 +1,19 @@
 <template>
   <div class="page" id="#contactme">
     <div class="page__title" v-if="!sendSuccesful">
-      <h1>{{ $t('contact.headline') }}</h1>
+      <h1>{{ $t("contact.headline") }}</h1>
       <br />
       <p>
-        {{ $t('contact.textContent1') }}
+        {{ $t("contact.textContent1") }}
         <a
           href="https://www.linkedin.com/in/mirza-malkoc-508470218/"
           target="_blank"
           rel="noopener"
         >
           LinkedIn</a
-        >. {{ $t('contact.textContent2') }}
+        >
+        / <a href="mailto:malkoc.mirza.95@gmail.com">E-Mail</a>.
+        {{ $t("contact.textContent2") }}
       </p>
     </div>
     <div class="form__card" v-if="!sendSuccesful">
@@ -61,7 +63,7 @@
             v-model="clientData.clientMessage"
           ></w-textarea>
           <w-button
-          color="black"
+            color="black"
             class="submit__button"
             type="submit"
             bg-color="blue-light2"
@@ -72,10 +74,15 @@
       </w-card>
     </div>
     <div class="page__title" v-else>
-      <h1>Nachricht gesendet.</h1>
+      <h1>
+        {{ $t("contact.thanksHeadline") }}
+        <w-icon color="white"
+          >mdi mdi-checkbox-marked-circle-outline</w-icon
+        >
+      </h1>
       <br />
       <p>
-        Vielen Dank für ihre Nachricht. Ich werde schnellstmöglich antworten.
+        {{ $t("contact.thanksText") }}
       </p>
     </div>
   </div>
@@ -155,7 +162,7 @@ div.page {
   width: 90vw;
   margin: 15vh auto;
   @media only screen and (min-width: 2100px) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -174,10 +181,10 @@ div.form__card {
   border: 2px solid;
   border-radius: 10px;
   caret-color: black;
-    @media only screen and (min-width: 2100px) {
-      width: 30%;
-      margin: 20vh auto;
-    transform: scale(2.4);
+  @media only screen and (min-width: 2100px) {
+    width: 30%;
+    margin: 20vh auto;
+    transform: scale(2.25);
   }
 }
 

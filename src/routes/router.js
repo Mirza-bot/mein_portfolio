@@ -26,7 +26,7 @@ const router = createRouter({
       if (to.hash) {
         const element = document.getElementById(to.hash);
         if (element && element.scrollIntoView) {
-          window.scrollTo({ top: element.offsetTop - 120, behavior: "smooth" });
+          window.scrollTo({ top: element.offsetTop - 150, behavior: "smooth" });
           return;
         }
         return;

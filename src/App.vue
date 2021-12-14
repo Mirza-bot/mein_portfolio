@@ -2,6 +2,7 @@
   <w-app>
     <main>
       <welcome></welcome>
+      <sticky-navbar></sticky-navbar>
       <the-header></the-header>
       <router-view v-slot="{ Component }">
         <transition name="cover" mode="in-out">
@@ -14,9 +15,10 @@
 
 <script>
 import TheHeader from "./components/layout/TheHeader.vue";
-import Welcome from "./pages/Welcome.vue"
+import Welcome from "./pages/Welcome.vue";
+import StickyNavbar from "./components/layout/StickyNavbar.vue";
 export default {
-  components: { TheHeader, Welcome },
+  components: { TheHeader, Welcome, StickyNavbar },
 };
 </script>
 

@@ -259,7 +259,7 @@ div.page__container {
   width: 80vw;
   margin: 15vh auto 5vh auto;
   @media only screen and (min-width: 2100px) {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   div.page__header {
     display: block;
@@ -268,7 +268,7 @@ div.page__container {
       font-size: 3rem;
       text-shadow: -3px 3px 3px black;
       @media only screen and (min-width: 2100px) {
-        font-size: 6rem;
+        font-size: 5rem;
       }
     }
     .w-divider {
@@ -278,7 +278,7 @@ div.page__container {
   ul {
     list-style-type: none;
     @media only screen and (min-width: 2100px) {
-      font-size: 3rem;
+      font-size: 2rem;
     }
   }
 }
@@ -288,7 +288,7 @@ div.md5 {
 }
 
 img.mobile__gif {
-  margin: 5vh auto 5vh 35vw;
+  margin: 5% auto 5% 30vw;
   max-width: 15vw;
   border: 1px solid black;
   border-radius: 45px;
@@ -304,20 +304,21 @@ img.mobile__gif {
 
 span.title2 {
   @media only screen and (min-width: 2100px) {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 }
 span.headline {
   @media only screen and (min-width: 2100px) {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 
 .link__button {
-  margin: 0 0 30px 0;
   transform: scale(2);
+  margin-bottom: 2rem;
   @media only screen and (min-width: 2100px) {
-    transform: scale(4);
+    transform: scale(3.5);
+    margin-bottom: 3rem;
   }
   @media only screen and (max-width: 1100px) {
     transform: scale(1.5);
