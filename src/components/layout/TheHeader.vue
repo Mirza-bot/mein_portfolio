@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="icon ml5 mt4 pb2" @click="$router.push('/welcome')">
+    <div class="icon ml5 mt4 pb2" @click="scrollUp(0)">
       <h1>Malkoc Mirza</h1>
       <p>
         <w-icon class="mr1" xl color="white"> mdi mdi-monitor-cellphone </w-icon
@@ -207,6 +207,9 @@ export default {
     redirect(route, hash) {
       router.push({ name: route, hash: hash });
       this.openDrawer = false;
+    },
+    scrollUp(position) {
+      window.scrollTo({top: position, behavior: "smooth"})
     },
     setLanguage(lang) {
       this.openDrawer = false;
