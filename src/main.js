@@ -47,6 +47,8 @@ const i18n = createI18n({
         },
       },
       aboutMe: {
+        headline: "Zur Person",
+        headline2: "Erfahrung in",
         jobTitle: "Frontend-Webentwickler",
         age: "Alter: 26",
         livingIn: "Wohnort: Wien",
@@ -87,7 +89,7 @@ const i18n = createI18n({
       welcome: {
         headline: "Welcome on Mirza's",
         headline2: "Portfolio-Website",
-        headline3: "Front-End-Development out of passion",
+        headline3: "Front-End-Development with passion",
         button: "Projects",
       },
       projects: {
@@ -95,28 +97,30 @@ const i18n = createI18n({
         description: "Description:",
         project1: {
           descriptionContent:
-            'This is a web-app which was made with JavaScript ,Vue3, Vue-Router and VueX. It uses Firebase as backend, which enables authentification functions and the saving of "task-cards", for each user that signs up. By means of the "drag & drop"- API, the cards can be moved within the three category rows. Deleting and editing of these cards is also possible.',
+            'This is a web-app which was created using JavaScript ,Vue3, Vue-Router and VueX. Firebase with its real-time database is used as the backend, this enables authentification functions and the saving of individual "task-cards", for each user who registers. The cards can be moved between the individual categories using the "Drag & Drop"-API. It is also possible to delete and edit the cards.',
           responsive: "No",
         },
         project2: {
           descriptionContent:
-            "A simple pizzeria-website which was made with JavaScript, Vue.js, Vue-Router and Sass. The design of the main page as well as the gallery site was made with a CSS-grid to ensure a symmetrical layout.",
+            "A simple pizzeria-website which was created using JavaScript, Vue.js, Vue-Router and Sass. The design of the main page as well as the gallery site was made with a CSS-grid to ensure a symmetrical layout.",
           responsive: "Yes",
         },
         project3: {
           title: "Salary Calculator (shift work)",
           descriptionContent:
-            "This web-app serves the purpose to calculate the salary considering the worked shift as well as shift allowances, overtime, hazard allowance, dirt allowance, vacation hours and holidays.",
+            "This web-app serves the purpose to calculate the salary considering the worked shift as well as shift allowances, overtime, hazard allowance, dirt allowance, vacation hours and holidays. Using the Ionic framework and Vue.js, a website was created that should be specifically adapted to mobile devices so that the calculation of the monthly wage is made easy and possible for everyone on the go.",
           responsive: "Yes",
         },
         project4: {
           title: "Portfolio Website",
           descriptionContent:
-            "The portfolio-website you are currently on was made with JavaScript, Vue.js, Vue-Router, Sass and Wave-UI.",
+            "The portfolio-website you are currently on was created using JavaScript, Vue.js, Vue-Router, Sass and Wave-UI.",
           responsive: "Yes",
         },
       },
       aboutMe: {
+        headline: "About me",
+        headline2: "Experience in",
         jobTitle: "Frontend-Webdeveloper",
         age: "Age: 26",
         livingIn: "Location: Vienna",
@@ -135,7 +139,7 @@ const i18n = createI18n({
           hobby4: "Hard- und Software",
         },
         personalText:
-          "Continuing education as a developer is very important to me. I am convinced that you don't have to know everything, you just have to look over the horizon at least once to know where to look. It is all the more important to me that employers share and support this view, because if we act in the interests of both, progress will not be long in coming.",
+          "Continuing education as a developer is very important to me. I am convinced that you don't have to know everything, you just have to peek over the horizon at least once to know where to look. It is all the more important to me that employers share and support this view, because if we act in the interests of both, progress will not be long in coming.",
       },
       contact: {
         headline: "Contact me.",

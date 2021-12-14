@@ -1,7 +1,7 @@
 <template>
   <div class="page__container" id="#aboutme">
     <div>
-      <h1 class="headline">Zur Person</h1>
+      <h1 class="headline">{{ $t("aboutMe.headline") }}</h1>
       <w-divider color="white" class="mb3" />
     </div>
     <w-flex wrap class="text-center mt10">
@@ -50,7 +50,7 @@
       </div>
     </w-flex>
     <div class="mt10">
-      <h1 class="headline">Erfahrung in</h1>
+      <h1 class="headline">{{ $t("aboutMe.headline2") }}</h1>
       <w-divider color="white" class="mb8" />
     </div>
     <w-flex wrap class="text-center">
