@@ -1,11 +1,11 @@
 <template>
-  <div class="page__container">
+  <div class="page__container" id="#aboutme">
     <div>
       <h1 class="headline">Zur Person</h1>
       <w-divider color="white" class="mb3" />
     </div>
     <w-flex wrap class="text-center mt10">
-      <div class="person__container lg3 bdrs4 bd3 sh6 mxa mb5">
+      <div class="person__container lg3 bdrs4 bd3 sh6 mxa">
         <img
           class="person__image bdrsm ma5 bd6 sh5"
           src="../images/Mirza.webp"
@@ -17,25 +17,27 @@
         </ul>
       </div>
       <div class="lg2 mxa text-left">
-        <ul class="ml6">
-          <li class="headline text-bold">Details:</li>
+        <ul class="ml3">
           <li class="title2 my2">Alter: 26</li>
           <li class="title2 my2">Wohnort: Wien</li>
-          <w-divider color="orange-light2" class="mr10" />
+        </ul>
+        <w-divider color="blue-light1" class="mx2" />
+        <ul class="ml3">
           <li class="headline text-bold my2">Fähigkeiten:</li>
           <li class="title2 my2">Analytisches Denken</li>
-          <li class="title2 my2">Ein Auge für Design</li>
           <li class="title2 my2">Hohe Lernbereitschaft</li>
           <li class="title2 my2">Teamplayer</li>
           <li class="title2 my2">Strukturiertes Arbeiten</li>
-          <w-divider color="orange-light2" class="mr10" />
+        </ul>
+        <w-divider color="blue-light1" class="mx2" />
+        <ul class="ml3">
           <li class="headline text-bold my2">Interessen:</li>
           <li class="title2 my2">Programmieren</li>
           <li class="title2 my2">Video- u. Bildbearbeitung</li>
           <li class="title2 my2">Lesen</li>
           <li class="title2 my2">Hard- und Software</li>
-          <w-divider color="orange-light2" class="mr10" />
         </ul>
+        <w-divider color="blue-light1" class="mx2" />
       </div>
       <div class="lg7">
         <ul>
@@ -64,6 +66,7 @@
         </ul>
       </div>
     </w-flex>
+    <w-divider color="white" class="mb3" />
   </div>
 </template>
 
@@ -90,7 +93,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/styles";
 div.page__container {
-  margin: 15vh 10vw 5vh 10vw;
+  margin: 5vh 10vw 5vh 10vw;
   font-family: "Roboto Condensed", sans-serif;
   h1.headline {
     font-size: 3rem;

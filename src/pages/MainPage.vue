@@ -1,20 +1,18 @@
 <template>
   <div>
-    <the-header></the-header>
-    <router-view v-slot="{ Component }">
-      <transition name="route" mode="out-in">
-        <component :is="Component"></component>
-      </transition>
-    </router-view>
+    <projects></projects>
+    <about-me></about-me>
+    <contact-me></contact-me>
   </div>
 </template>
 
 <script>
-import TheHeader from "../components/layout/TheHeader.vue"
+import Projects from "./Projects.vue";
+import AboutMe from "./AboutMe.vue";
+import ContactMe from "./ContactMe.vue";
 export default {
-    components: { TheHeader }
-}
-
+  components: {Projects, AboutMe, ContactMe },
+};
 </script>
 
 <style lang="scss" scoped>

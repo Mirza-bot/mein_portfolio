@@ -2,23 +2,12 @@
   <section>
     <div class="image__container">
       <div class="front__font">
-        <h1 class="headline"> {{ $t("welcome.headline") }} </h1>
-        <h2 class="title2"> {{ $t("welcome.headline2") }} </h2>
-      </div>
-      <div class="front__button">
-        <w-button
-          class="ma1"
-          color="black"
-          bg-color="orange-light2"
-          shadow
-          @click="$router.push('main/projects')"
-          ><span> {{ $t("welcome.button") }}</span>
-        </w-button>
+        <h1 class="headline">{{ $t("welcome.headline") }}</h1>
+        <h2 class="title2">{{ $t("welcome.headline2") }}</h2>
       </div>
     </div>
   </section>
 </template>
-
 
 <style lang="scss" scoped>
 @import "../assets/styles";
@@ -26,9 +15,9 @@ div.image__container {
   height: 100vh;
   width: 100%;
   display: inline-block;
-  position: absolute;
-  margin-top: 10vh;
   color: $mainColor;
+  z-index: 200;
+  position: static;
   text-align: center;
   font-family: "Roboto Condensed";
   background-image: linear-gradient(
@@ -80,19 +69,6 @@ div.image__container {
       @media only screen and (min-width: 1900px) {
         font-size: 4rem;
       }
-    }
-  }
-
-  div.front__button {
-    position: absolute;
-    font-size: 0rem;
-    top: 70%;
-    left: 50%;
-    -webkit-text-stroke: 0.3px white;
-    font-family: Bebas Neue, sans-serif;
-    transform: translate(-50%, -50%) scale(2);
-    @media only screen and (min-width: 2100px) {
-      transform: scale(4);
     }
   }
 

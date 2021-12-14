@@ -1,16 +1,16 @@
 <template>
   <header>
-    <div class="icon ml5 mt4 pb2" @click="redirect('main/welcome')">
+    <div class="icon ml5 mt4 pb2" @click="$router.push('/welcome')">
       <h1>Malkoc Mirza</h1>
       <p>
-        <w-icon class="mr1" xl color="black"> mdi mdi-monitor-cellphone </w-icon
+        <w-icon class="mr1" xl color="white"> mdi mdi-monitor-cellphone </w-icon
         >Web-Developer/Front-End-Developer
       </p>
     </div>
     <div class="other__links ml10" v-if="!mobileMenu">
       <div class="github__link">
         <a href="https://github.com/Mirza-bot" rel="noopener" target="_blank">
-          <w-icon xl color="black my3 ml2"> mdi mdi-github </w-icon
+          <w-icon xl color="white my3 ml2"> mdi mdi-github </w-icon
           ><span>GitHub</span><br />
         </a>
       </div>
@@ -20,7 +20,7 @@
           rel="noopener"
           target="_blank"
         >
-          <w-icon xl color="black my1 ml2"> mdi mdi-linkedin </w-icon
+          <w-icon xl color="white my1 ml2"> mdi mdi-linkedin </w-icon
           ><span>LinkedIn</span><br />
         </a>
       </div>
@@ -31,10 +31,10 @@
           <w-button
             class="nav__button"
             outline
-            color="black"
-            @click="redirect('main/projects')"
+            color="white"
+            @click="redirect('main', '#projects')"
             ><span
-              ><w-icon color="black" class="mt-1 mr1">
+              ><w-icon color="white" lg class="mt-1 mr1">
                 mdi mdi-table-settings </w-icon
               >{{ $t("header.projects") }}</span
             ></w-button
@@ -44,10 +44,10 @@
           <w-button
             class="nav__button"
             outline
-            color="black"
-            @click="redirect('main/aboutme')"
+            color="white"
+            @click="redirect('main', '#aboutme')"
             ><span
-              ><w-icon color="black" class="mt-2 mr1">
+              ><w-icon color="white" lg class="mt-2 mr1">
                 mdi mdi-badge-account-outline </w-icon
               >Person</span
             ></w-button
@@ -57,10 +57,10 @@
           <w-button
             class="nav__button"
             outline
-            color="black"
-            @click="redirect('main/contact')"
+            color="white"
+            @click="redirect('main', '#contactme')"
             ><span
-              ><w-icon color="black" class="mt-1 mr1"> mdi mdi-email </w-icon
+              ><w-icon color="white" lg class="mt-1 mr1"> mdi mdi-email </w-icon
               >{{ $t("header.contact") }}</span
             ></w-button
           >
@@ -80,37 +80,43 @@
       </ul>
     </div>
     <div class="mobile__menu my6 mx4" v-else>
-      <w-button class="py5" @click="openDrawer = true" color="black" outline aria-label="Menu">
-        <w-icon xl color="black"> mdi mdi-menu </w-icon>
+      <w-button
+        class="py5"
+        @click="openDrawer = true"
+        color="white"
+        outline
+        aria-label="Menu"
+      >
+        <w-icon xl color="white"> mdi mdi-menu </w-icon>
       </w-button>
-      <w-drawer v-model="openDrawer" width="30vw" bg-color="black">
-        <div class="grow mx0 mobile__drawer">
+      <w-drawer v-model="openDrawer" width="20vw" bg-color="black">
+        <div class="grow mxa mobile__drawer">
           <w-flex column align-center justify-space-between class="wrapper">
             <div class="box">
-              <w-button color="black" outline xl @click="openDrawer = false"
-                ><w-icon xl color="black">
+              <w-button color="white" outline xl @click="openDrawer = false"
+                ><w-icon xl color="white">
                   mdi mdi-arrow-left
                 </w-icon></w-button
               >
             </div>
             <div class="box">
               <w-button
-                color="black"
+                color="white"
                 outline
                 xl
-                @click="redirect('main/projects')"
-                ><w-icon xl color="black"> mdi mdi-table-settings </w-icon>
+                @click="redirect('main', '#projects')"
+                ><w-icon xl color="white"> mdi mdi-table-settings </w-icon>
               </w-button>
               <br />
               <span>{{ $t("header.projects") }}</span>
             </div>
             <div class="box">
               <w-button
-                color="black"
+                color="white"
                 outline
                 xl
-                @click="redirect('main/aboutme')"
-                ><w-icon xl color="black">
+                @click="redirect('main', '#aboutme')"
+                ><w-icon xl color="white">
                   mdi mdi-badge-account-outline
                 </w-icon></w-button
               >
@@ -119,11 +125,11 @@
             </div>
             <div class="box">
               <w-button
-                color="black"
+                color="white"
                 outline
                 xl
-                @click="redirect('main/contact')"
-                ><w-icon xl color="black"> mdi mdi-email </w-icon>
+                @click="redirect('main', '#contactme')"
+                ><w-icon xl color="white"> mdi mdi-email </w-icon>
               </w-button>
               <br />
               <span>{{ $t("header.contact") }}</span>
@@ -136,7 +142,7 @@
                     rel="noopener"
                     target="_blank"
                   >
-                    <w-icon xl color="black"> mdi mdi-github </w-icon><br />
+                    <w-icon xl color="white"> mdi mdi-github </w-icon><br />
                     <span>GitHub</span>
                   </a>
                 </li>
@@ -146,7 +152,7 @@
                     rel="noopener"
                     target="_blank"
                   >
-                    <w-icon xl color="black"> mdi mdi-linkedin </w-icon><br />
+                    <w-icon xl color="white"> mdi mdi-linkedin </w-icon><br />
                     <span>LinkedIn</span>
                   </a>
                 </li>
@@ -198,12 +204,9 @@ export default {
     };
   },
   methods: {
-    redirect(route) {
-      router.push(route);
+    redirect(route, hash) {
+      router.push({ name: route, hash: hash });
       this.openDrawer = false;
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-      }, 270);
     },
     setLanguage(lang) {
       this.openDrawer = false;
@@ -224,10 +227,11 @@ export default {
 
 header {
   background: $mainGradient;
-  position: fixed;
   width: 100vw;
-  top: 0;
   z-index: 100;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0vh;
   font-size: 1rem;
   box-shadow: 0px 4px 4px black;
   @media only screen and (min-width: 2100px) {
@@ -239,8 +243,8 @@ header {
 }
 div.icon {
   font-family: "Bebas Neue", cursive;
-  color: black;
-  text-shadow: -6px 4px 3px rgb(214, 121, 0);
+  color: white;
+  text-shadow: -6px 4px 3px rgb(0, 0, 0);
   display: inline-block;
   caret-color: transparent;
   :hover {
@@ -255,13 +259,13 @@ div.icon {
 }
 
 a {
-  color:black;
+  color: white;
 }
 
 div.nav__links {
   float: right;
   font-family: "Roboto Condensed", sans-serif;
-  color: rgb(0, 0, 0);
+  color: white;
   padding: 2rem;
   @media only screen and (min-width: 2100px) {
     margin: 1rem 3rem 1rem 3rem;
@@ -294,7 +298,7 @@ div.language__selector {
   height: 30px;
   margin: 8% 1rem 0 0;
   padding: 3px;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 3px;
   @media only screen and (min-width: 2100px) {
     width: 70px;
@@ -315,7 +319,7 @@ div.language__selector {
 
 div.other__links {
   display: inline-block;
-  color: black;
+  color: white;
   font-family: "Roboto Condensed", sans-serif;
   div {
     :hover {
@@ -337,13 +341,13 @@ div.box {
   text-align: center;
   margin: 3vh 2vw 5vw 2vw;
   font-family: "Roboto Condensed", sans-serif;
-  color: black;
+  color: white;
   ul {
     list-style: none;
     li {
       margin: 40px 0 20px 0;
       a {
-        color: black;
+        color: white;
       }
     }
   }

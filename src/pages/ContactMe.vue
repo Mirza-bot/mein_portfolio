@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page" id="#contactme">
     <div class="page__title" v-if="!sendSuccesful">
       <h1>{{ $t('contact.headline') }}</h1>
       <br />
@@ -8,6 +8,7 @@
         <a
           href="https://www.linkedin.com/in/mirza-malkoc-508470218/"
           target="_blank"
+          rel="noopener"
         >
           LinkedIn</a
         >. {{ $t('contact.textContent2') }}
@@ -22,7 +23,7 @@
             label="E-Mail*"
             type="email"
             name="email"
-            bg-color="orange-light4"
+            bg-color="blue-light4"
             outline
             v-model="clientData.clientEmail"
             required
@@ -34,7 +35,7 @@
             label="Name*"
             type="text"
             name="name"
-            bg-color="orange-light4"
+            bg-color="blue-light4"
             outline
             v-model="clientData.clientName"
           >
@@ -45,7 +46,7 @@
             type="tel"
             pattern="[0-9]*"
             name="phoneNumber"
-            bg-color="orange-light4"
+            bg-color="blue-light4"
             outline
             v-model="clientData.clientNumber"
           >
@@ -56,13 +57,14 @@
             type="text"
             name="message"
             :placeholder="$t('contact.messageLabel')"
-            bg-color="orange-light4"
+            bg-color="blue-light4"
             v-model="clientData.clientMessage"
           ></w-textarea>
           <w-button
+          color="black"
             class="submit__button"
             type="submit"
-            bg-color="orange-light2"
+            bg-color="blue-light2"
             @click="submitForm"
             >{{ $t("contact.submitButton") }}</w-button
           >
@@ -150,6 +152,7 @@ export default {
 <style lang="scss" scoped>
 div.page {
   font-family: "Roboto Condensed", sans-serif;
+  width: 90vw;
   margin: 15vh auto;
   @media only screen and (min-width: 2100px) {
     font-size: 3rem;
@@ -165,7 +168,7 @@ div.page__title {
 }
 div.form__card {
   width: 70%;
-  margin: 10vh auto;
+  margin: 5vh auto;
   color: black;
   background-color: white;
   border: 2px solid;
