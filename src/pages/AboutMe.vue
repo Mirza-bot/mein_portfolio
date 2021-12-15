@@ -7,23 +7,22 @@
     <w-flex wrap class="text-center mt10 aboutme_background">
       <div class="person__container lg3 mxa">
         <img
-          class="person__image bdrsm ma5 bd6 sh5"
+          class="person__image bdrsm bd6 sh5"
           src="../images/Mirza.webp"
           alt="Portfolio Picture"
         />
-        <ul>
-          <li class="ma4 text-bold">Malkoc Mirza</li>
-          <li class="ma4 text-bold">{{ $t("aboutMe.jobTitle") }}</li>
+        <br />
+        <ul class="name_plate mb10">
+          <li>
+            <span class="text-bold name_plate">Mirza MALKOC</span>
+          </li>
+          <li>{{ $t("aboutMe.age") }}</li>
+          <li>{{ $t("aboutMe.livingIn") }}</li>
         </ul>
       </div>
       <div class="about_me_skills lg2 mxa text-left">
         <ul class="ml3">
-          <li class="my2">{{ $t("aboutMe.age") }}</li>
-          <li class="my2">{{ $t("aboutMe.livingIn") }}</li>
-        </ul>
-        <w-divider color="blue-light1" class="mx2" />
-        <ul class="ml3">
-          <li class="text-bold my2">
+          <li class="my2">
             {{ $t("aboutMe.skills.headline") }}
           </li>
           <li class="my2">{{ $t("aboutMe.skills.skill1") }}</li>
@@ -31,8 +30,17 @@
           <li class="my2">{{ $t("aboutMe.skills.skill3") }}</li>
           <li class="my2">{{ $t("aboutMe.skills.skill4") }}</li>
         </ul>
+        <w-divider color="blue-light1" class="mx2" />
+        <ul class="ml3 mb5">
+          <li class="my2">
+            {{ $t("aboutMe.languages.title") }}
+          </li>
+          <li class="my2">{{ $t("aboutMe.languages.german") }}</li>
+          <li class="my2">{{ $t("aboutMe.languages.english") }}</li>
+          <li class="my2">{{ $t("aboutMe.languages.bosnian") }}</li>
+        </ul>
       </div>
-      <div class="about_me_text lg7 px5">
+      <div class="about_me_text lg7 mxa">
         <p class="personal__text">
           {{ $t("aboutMe.personalText") }}
         </p>
@@ -142,7 +150,6 @@ ul {
 }
 div.person__container {
   color: white;
-  -webkit-text-stroke: 1px black;
   font-size: 2rem;
   @media only screen and (min-width: 2100px) {
     font-size: 4rem;
@@ -152,7 +159,7 @@ div.person__container {
 img.person__image {
   width: 15vw;
   @media only screen and (max-width: 1100px) {
-    width: 30vw;
+    width: 50vw;
   }
 }
 
@@ -161,6 +168,22 @@ div.about_me_skills {
   @media only screen and (min-width: 2100px) {
     font-size: 3rem;
   }
+}
+
+span.name_plate {
+  font-size: 2.5rem;
+  white-space: nowrap;
+  @media only screen and (min-width: 2100px) {
+    font-size: 4rem;
+  }
+  @media only screen and (max-width: 1100px) {
+    font-size: 2rem;
+  }
+}
+
+ul.name_plate {
+  text-align: start;
+  font-size: 1.5rem;
 }
 
 .aboutme_background {

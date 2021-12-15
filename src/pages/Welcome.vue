@@ -42,16 +42,15 @@ div.image__container {
   font-family: "Roboto Condensed";
   background-image: linear-gradient(
       90deg,
-      rgb(0, 0, 0) 3%,
-      rgba(0, 0, 0, 0.623) 50%,
-      rgb(0, 0, 0) 97%
+      rgb(0, 0, 0) 0.33%,
+      rgba(0, 0, 0, 0.823) 50%,
+      rgb(0, 0, 0) 99.77%
     ),
     url("../images/cover.webp");
   background-position: center;
   background-attachment: fixed;
   filter: saturate(1.8);
   background-size: cover;
-  background-color: rgba($color: #000000, $alpha: 1.6);
 
   @media only screen and (max-width: 1100px) {
     font-size: 1rem;

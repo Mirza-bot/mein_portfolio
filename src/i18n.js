@@ -22,12 +22,12 @@ const i18n = createI18n({
           description: "Beschreibung:",
           project1: {
             descriptionContent:
-              'Dies ist eine Web-App welche mittels JavaScript, Vue3, Vue-Router und VueX erstellt wurde. Als Backend wird Firebase mit ihrer Realtime-Database genutzt, dies ermöglicht Authentifizierungsfunktionen und das Speichern der eigenen "Task-Karten", für jeden Nutzer der sich registriert. Mittels der "Drag & Drop"-API können die Karten zwischen den einzelnen Kategorien verschoben werden. Das Löschen und Editieren der Karten ist ebenfalls möglich.',
+              'Kanban ist eine Web-App welche mittels JavaScript, Vue3, Vue-Router und VueX erstellt wurde. Als Backend wird Firebase mit ihrer Realtime-Database genutzt, dies ermöglicht Authentifizierungsfunktionen und das Speichern der eigenen "Task-Karten", für jeden Nutzer der sich registriert. Mittels der "Drag & Drop"-API können die Karten zwischen den einzelnen Kategorien verschoben werden. Das Löschen und Editieren der Karten ist ebenfalls möglich.',
             responsive: "Nein",
           },
           project2: {
             descriptionContent:
-              "Eine simple Pizzeria-Webseite welche mittels JavaScript, Vue.js, Vue-Router und Sass erstellt wurde. Das Design der Hauptseite, sowie der Gallerie wurden mit einem CSS-Grid erstellt um ein symetrisches Layout zu erzielen.",
+              "Eine simple Pizzeria-Webseite welche mittels JavaScript, Vue.js, Vue-Router und Sass erstellt wurde. Das Design der Hauptseite, sowie der Galerie wurden mit einem CSS-Grid erstellt um ein symmetrisches Layout zu erzielen.",
             responsive: "Ja",
           },
           project3: {
@@ -46,23 +46,28 @@ const i18n = createI18n({
         aboutMe: {
           headline: "Zur Person",
           headline2: "Erfahrung in",
-          jobTitle: "Frontend-Webentwickler",
           age: "Alter: 26",
           livingIn: "Wohnort: Wien",
           skills: {
-            headline: "Fähigkeiten:",
+            headline: "FÄHIGKEITEN:",
             skill1: "Analytisches Denken",
             skill2: "Hohe Lernbereitschaft",
             skill3: "Teamplayer",
             skill4: "Strukturiertes Arbeiten",
           },
+          languages: {
+            title: "SPRACHEN:",
+            german: "Deutsch",
+            english: "Englisch",
+            bosnian: "Bosnisch"
+          },
           personalText:
-            "Als Entwickler ist mir Weiterbildung ein wichtiges Anliegen. Jedoch bin ich überzeugt, dass man nicht alles wissen muss, man muss nur wenigstens einmal über den Horizont geschaut haben, um zu wissen, wo man nachsehen muss.",
+            "Als Entwickler ist mir Weiterbildung ein wichtiges Anliegen. Jedoch bin ich überzeugt, dass man nicht alles wissen muss, man muss nur einmal über den Horizont geschaut haben, um zu wissen, wo man nachsehen muss.",
         },
         contact: {
           headline: "Kontaktieren Sie mich.",
           textContent1:
-            "Sie können mir direkt über das Online-Formular schreiben oder Sie senden mir eine Nachricht über ",
+            "Sie können mir direkt über das Online-Formular schreiben oder Sie senden mir eine Nachricht via ",
           textContent2: "Ich werde mich um eine schnelle Antwort bemühen.",
           messageLabel: "Nachricht*",
           submitButton: "Senden",
@@ -87,18 +92,18 @@ const i18n = createI18n({
           description: "Description:",
           project1: {
             descriptionContent:
-              'This is a web-app which was created using JavaScript ,Vue3, Vue-Router and VueX. Firebase with its real-time database is used as the backend, this enables authentification functions and the saving of individual "task-cards", for each user who registers. The cards can be moved between the individual categories using the "Drag & Drop"-API. It is also possible to delete and edit the cards.',
+              'Kanban is a web-app that was created using JavaScript ,Vue3, Vue-Router and VueX. Firebase with its real-time database is used as the backend, this enables authentification functions and the saving of individual "task-cards", for each user who registers. The cards can be moved between the individual categories using the "Drag & Drop"-API. It is also possible to delete and edit the cards.',
             responsive: "No",
           },
           project2: {
             descriptionContent:
-              "A simple pizzeria-website which was created using JavaScript, Vue.js, Vue-Router and Sass. The design of the main page as well as the gallery site was made with a CSS-grid to ensure a symmetrical layout.",
+              "A simple pizzeria-website which was created using JavaScript, Vue.js, Vue-Router and Sass. The design of the main page together with the gallery page were created with a CSS-grid to ensure a symmetrical layout.",
             responsive: "Yes",
           },
           project3: {
             title: "Salary Calculator (shift work)",
             descriptionContent:
-              "This web-app serves the purpose to calculate the salary considering the worked shift as well as shift allowances, overtime, hazard allowance, dirt allowance, vacation hours and holidays. Using the Ionic framework and Vue.js, a website was created that should be specifically adapted to mobile devices so that the calculation of the monthly wage is made easy and possible for everyone on the go.",
+              "This web-app serves the purpose to calculate the salary considering the worked shift as well as shift allowances, overtime, hazard allowance, dirt allowance, vacation hours and holidays. Using the Ionic framework and Vue.js, a website was created that should be specifically adapted to mobile devices. This makes it easy as possible for everyone to calculate their salary on the go.",
             responsive: "Yes",
           },
           project4: {
@@ -111,15 +116,20 @@ const i18n = createI18n({
         aboutMe: {
           headline: "About me",
           headline2: "Experience in",
-          jobTitle: "Frontend-Webdeveloper",
           age: "Age: 26",
           livingIn: "Location: Vienna",
           skills: {
-            headline: "Skills:",
+            headline: "SKILLS:",
             skill1: "Analytical thinking",
             skill2: "Willingess to learn",
             skill3: "Teamplayer",
             skill4: "Structured working",
+          },
+          languages: {
+            title: "LANGUAGES:",
+            german: "German",
+            english: "English",
+            bosnian: "Bosnian"
           },
           personalText:
             "As a developer, continuing education is very important to me. However, I am convinced that you don't have to know everything, you just have to peek over the horizon at least once to know where to look.",
@@ -127,8 +137,8 @@ const i18n = createI18n({
         contact: {
           headline: "Contact me.",
           textContent1:
-            "You can message me directly from the online-form or you reach out to me from",
-          textContent2: "I'll answer as soon as possible.",
+            "You can message me directly from the online-form or you reach out to me via",
+          textContent2: "I'm looking forward to hear from you.",
           messageLabel: "Message*",
           submitButton: "Send",
           thanksHeadline: "Message sent.",
