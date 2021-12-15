@@ -242,12 +242,16 @@
 </template>
 
 <script>
+import KanbanImg from '../images/kanban.webp'
+import PizzeriaImg from '../images/pietros pizzeria.webp'
+import SalaryCalcImg from '../images/lohnrechner.webp'
+import PortfolioImg from '../images/Portfolio.webp'
 export default {
   data: () => ({
-    projectImg1: `./src/images/kanban.webp`,
-    projectImg2: `./src/images/pietros pizzeria.webp`,
-    projectImg3: `./src/images/lohnrechner.webp`,
-    projectImg4: `./src/images/portfolio.webp`,
+    projectImg1: KanbanImg,
+    projectImg2: PizzeriaImg,
+    projectImg3: SalaryCalcImg,
+    projectImg4: PortfolioImg,
   }),
 };
 </script>

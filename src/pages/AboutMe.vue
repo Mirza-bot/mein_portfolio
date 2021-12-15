@@ -4,8 +4,8 @@
       <h1 class="headline">{{ $t("aboutMe.headline") }}</h1>
       <w-divider color="white" class="mb3" />
     </div>
-    <w-flex wrap class="text-center mt10">
-      <div class="person__container lg3 bdrs4 bd3 sh6 mxa">
+    <w-flex wrap class="text-center mt10 aboutme_background">
+      <div class="person__container lg3 mxa">
         <img
           class="person__image bdrsm ma5 bd6 sh5"
           src="../images/Mirza.webp"
@@ -31,17 +31,6 @@
           <li class="my2">{{ $t("aboutMe.skills.skill3") }}</li>
           <li class="my2">{{ $t("aboutMe.skills.skill4") }}</li>
         </ul>
-        <w-divider color="blue-light1" class="mx2" />
-        <ul class="ml3">
-          <li class="text-bold my2">
-            {{ $t("aboutMe.hobbies.headline") }}
-          </li>
-          <li class="my2">{{ $t("aboutMe.hobbies.hobby1") }}</li>
-          <li class="my2">{{ $t("aboutMe.hobbies.hobby2") }}</li>
-          <li class="my2">{{ $t("aboutMe.hobbies.hobby4") }}</li>
-          <li class="my2">{{ $t("aboutMe.hobbies.hobby3") }}</li>
-        </ul>
-        <w-divider color="blue-light1" class="mx2" />
       </div>
       <div class="about_me_text lg7 px5">
         <p class="personal__text">
@@ -59,7 +48,7 @@
           <li>
             <img
               class="skill__image bdrs2"
-              :src="`${badge.img}`"
+              :src="badge.img"
               alt="Vue.js Icon"
             />
           </li>
@@ -74,18 +63,27 @@
 </template>
 
 <script>
+import JavaScriptImg from "../images/JavaScript.png";
+import BootstrapImg from "../images/Bootstrap.png";
+import VueImg from "../images/Vuejs_icon.png";
+import SassImg from "../images/Sass.png";
+import WaveImg from "../images/wave-ui.webp";
+import SEOImg from "../images/SEO.jpg";
+import GitImg from "../images/Git-Icon.png";
+import RespImg from "../images/Responsive.png";
 export default {
   setup() {
     const badges = [
-      { name: "JavaScript", img: "./src/images/JavaScript.png" },
-      { name: "Vue.js", img: "./src/images/Vuejs_icon.png" },
-      { name: "Sass", img: "./src/images/Sass.png" },
-      { name: "Bootstrap", img: "./src/images/Bootstrap.png" },
-      { name: "WaveUI (Vue.js)", img: "./src/images/wave-ui.webp" },
-      { name: "Onpage SEO", img: "./src/images/SEO.jpg" },
-      { name: "Git", img: "./src/images/Git-Icon.png" },
-      { name: "Responsive Designs", img: "./src/images/Responsive.png" },
+      { name: "JavaScript", img: JavaScriptImg },
+      { name: "Vue.js", img: VueImg },
+      { name: "Sass", img: SassImg },
+      { name: "Bootstrap", img: BootstrapImg },
+      { name: "WaveUI (Vue.js)", img: WaveImg },
+      { name: "Onpage SEO", img: SEOImg },
+      { name: "Git", img: GitImg },
+      { name: "Responsive Designs", img: RespImg },
     ];
+
     return {
       badges,
     };
@@ -143,7 +141,6 @@ ul {
   perspective: 500px;
 }
 div.person__container {
-  background: $mainGradient;
   color: white;
   -webkit-text-stroke: 1px black;
   font-size: 2rem;
@@ -166,10 +163,18 @@ div.about_me_skills {
   }
 }
 
+.aboutme_background {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/Vienna.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2%;
+}
+
 p.personal__text {
   font-size: 1.5rem;
   border: 2px solid white;
-  padding: 10px;
+  padding: 20px;
   @media only screen and (min-width: 2100px) {
     font-size: 3rem;
   }

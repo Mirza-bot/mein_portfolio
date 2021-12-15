@@ -33,6 +33,7 @@ export default {
 div.image__container {
   height: 110vh;
   width: 100vw;
+  padding: 0 10vw 0 10vw;
   display: inline-block;
   color: $mainColor;
   z-index: 200;
@@ -59,7 +60,6 @@ div.image__container {
   div.front__font {
     position: sticky;
     top: 30%;
-    margin-left: 10%;
     caret-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -74,7 +74,7 @@ div.image__container {
       color: white;
       animation: fadeDown 1s ease-in-out forwards;
       font-size: 2rem;
-      @media only screen and (min-width: 1900px) {
+      @media only screen and (min-width: 2100px) {
         font-size: 4rem;
       }
       @media only screen and (max-width: 1100px) {
@@ -84,7 +84,7 @@ div.image__container {
     h2 {
       font-size: 3rem;
       animation: fadeLeft 0.5s ease-in-out forwards;
-      @media only screen and (min-width: 1900px) {
+      @media only screen and (min-width: 2100px) {
         font-size: 6rem;
       }
       @media only screen and (max-width: 1100px) {
@@ -96,7 +96,7 @@ div.image__container {
       color: white;
       font-size: 2rem;
       animation: fadeUp 0.8s ease-in-out forwards;
-      @media only screen and (min-width: 1900px) {
+      @media only screen and (min-width: 2100px) {
         font-size: 4rem;
       }
       @media only screen and (max-width: 1100px) {

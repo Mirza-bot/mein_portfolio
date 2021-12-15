@@ -9,7 +9,8 @@ export default defineConfig({
     vue(),
     vueI18n({
       compositionOnly: false,
-      include: path.resolve(__dirname, './path/to/src/locales/**')
+      runtimeOnly: false,
+      include: path.resolve(__dirname, './src/locales/i18n.js')
     })
   ],
   server: {

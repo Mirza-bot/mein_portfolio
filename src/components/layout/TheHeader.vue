@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="icon ml5 mt4 pb2" @click="scrollUp(0)">
-      <h1>Malkoc Mirza</h1>
+      <h1>Mirza Malkoc</h1>
       <p>
         <w-icon class="mr1" xl color="white"> mdi mdi-monitor-cellphone </w-icon
         >Web-Developer/Front-End-Developer
