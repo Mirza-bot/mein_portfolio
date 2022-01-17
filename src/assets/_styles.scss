@@ -3,12 +3,19 @@
 
 //colors
 
-$mainColor: rgb(98, 179, 245);
+$mainColor: rgba(0, 0, 0, 0.52);
 $mainGradient: linear-gradient(
-  60deg,
+  180deg,
+  #000000 1%,
+  rgb(21, 110, 182) 5%,
+  rgb(8, 38, 63) 95%,
+  #000000 99%    
+);
+
+
+/*  
   #303bdf 5%,
   rgb(26, 128, 211) 30%,
   rgb(23, 114, 189) 60%,
-  #2841cf 95%
-);
-
+  #2841cf 95%   
+*/

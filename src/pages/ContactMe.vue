@@ -6,7 +6,7 @@
       <p>
         {{ $t("contact.textContent1") }}
         <a
-          href="https://www.linkedin.com/in/mirza-malkoc-508470218/"
+          href="https://www.linkedin.com/in/mirzamalkoc/"
           target="_blank"
           rel="noopener"
         >
@@ -25,7 +25,8 @@
             label="E-Mail*"
             type="email"
             name="email"
-            bg-color="blue-light4"
+            bg-color="black"
+            color="white"
             outline
             v-model="clientData.clientEmail"
             required
@@ -37,7 +38,8 @@
             label="Name*"
             type="text"
             name="name"
-            bg-color="blue-light4"
+            bg-color="black"
+            color="white"
             outline
             v-model="clientData.clientName"
           >
@@ -48,7 +50,8 @@
             type="tel"
             pattern="[0-9]*"
             name="phoneNumber"
-            bg-color="blue-light4"
+            bg-color="black"
+            color="white"
             outline
             v-model="clientData.clientNumber"
           >
@@ -59,14 +62,14 @@
             type="text"
             name="message"
             :placeholder="$t('contact.messageLabel')"
-            bg-color="blue-light4"
+            bg-color="black"
             v-model="clientData.clientMessage"
           ></w-textarea>
           <w-button
-            color="black"
+            color="white"
             class="submit__button"
             type="submit"
-            bg-color="blue-light2"
+            bg-color="black"
             @click="submitForm"
             >{{ $t("contact.submitButton") }}</w-button
           >
@@ -76,9 +79,7 @@
     <div class="page__title" v-else>
       <h1>
         {{ $t("contact.thanksHeadline") }}
-        <w-icon color="white"
-          >mdi mdi-checkbox-marked-circle-outline</w-icon
-        >
+        <w-icon color="white">mdi mdi-checkbox-marked-circle-outline</w-icon>
       </h1>
       <br />
       <p>
@@ -160,9 +161,12 @@ export default {
 div.page {
   font-family: "Roboto Condensed", sans-serif;
   width: 90vw;
-  margin: 15vh auto;
+  margin: 10vh auto;
   @media only screen and (min-width: 2100px) {
     font-size: 2.5rem;
+  }
+  @media only screen and (max-width: 1100px) {
+    width: 100vw;
   }
 }
 

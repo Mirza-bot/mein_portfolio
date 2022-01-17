@@ -2,256 +2,120 @@
   <div class="page__container" id="#projects">
     <div class="page__header">
       <h2>{{ $t("projects.headline") }}</h2>
-      <w-divider color="white" class="my3" />
     </div>
-    <span class="headline">Kanban-Board-App</span>
-    <w-card :image="`${projectImg1}`" class="mt3" no-border>
-      <w-flex wrap class="my5">
-        <div class="md10 pr5">
-          <span class="title2">{{ $t("projects.description") }}</span
-          ><br /><br />
-          {{ $t("projects.project1.descriptionContent") }}
-          <br />
-          <br />
-          <span class="description"
-            >Responsive: {{ $t("projects.project1.responsive") }}</span
+    <div class="page__body bd3 bdrs1">
+      <w-button
+        class="project__button"
+        bg-color="black"
+        dark
+        @click="showOverlay4 = true"
+      >
+        {{ $t("projects.project4.title") }}
+      </w-button>
+
+      <w-overlay v-model="showOverlay4" bg-color="rgba(0, 0, 0, 0.9)">
+        <div class="overlay__container">
+          <w-button
+            class="close__overlay"
+            bg-color="white"
+            color="black"
+            lg
+            dark
+            @click="showOverlay4 = false"
           >
+            <w-icon>wi-cross</w-icon>
+          </w-button>
+          <PortfolioP></PortfolioP>
         </div>
-        <div class="md2">
-          <span class="title2">Tools:</span>
-          <ul class="mx5">
-            <li><w-icon>mdi mdi-language-html5</w-icon>HTML5</li>
-            <li><w-icon l>mdi mdi-sass</w-icon>Sass</li>
-            <li><w-icon l>mdi mdi-language-javascript</w-icon>JavaScript</li>
-            <li><w-icon l>mdi mdi-vuejs</w-icon>Vue.js</li>
-            <li>Vue-Router</li>
-            <li>Vuex</li>
-            <li><w-icon l>mdi mdi-firebase</w-icon>Firebase</li>
-          </ul>
-        </div>
-      </w-flex>
-      <template #actions>
-        <w-flex wrap class="text-center">
-          <div class="xs6">
-            <a
-              href="https://kanban-board-91d98.web.app/"
-              rel="noopener"
-              target="_blank"
-            >
-              <w-button
-                class="link__button"
-                bg-color="blue-light2"
-                color="black"
-                ><w-icon class="mr2" color="black">mdi mdi-desktop-mac</w-icon>
-                Demo</w-button
-              >
-            </a>
-          </div>
-          <div class="xs6">
-            <a
-              href="https://github.com/Mirza-bot/Kanban-board/tree/main/kanban-board"
-              rel="noopener"
-              target="_blank"
-            >
-              <w-button
-                class="link__button"
-                bg-color="blue-light2"
-                color="black"
-                ><w-icon class="mr2" color="black">mdi mdi-code-braces</w-icon
-                >Code</w-button
-              >
-            </a>
-          </div>
-        </w-flex>
-      </template>
-    </w-card>
-    <w-divider color="white" class="mb3"></w-divider>
-    <span class="headline mb2">Pietros Pizzeria</span>
-    <w-card :image="`${projectImg2}`" class="mt3" no-border>
-      <br />
-      <w-flex wrap class="my3">
-        <div class="md10 pr5">
-          <span class="title2">{{ $t("projects.description") }}</span
-          ><br /><br />
-          {{ $t("projects.project2.descriptionContent") }}
-          <br />
-          <br />
-          <span class="description"
-            >Responsive: {{ $t("projects.project2.responsive") }}</span
+      </w-overlay>
+      <w-button
+        class="project__button"
+        bg-color="black"
+        dark
+        @click="showOverlay3 = true"
+      >
+        {{ $t("projects.project3.title") }}
+      </w-button>
+
+      <w-overlay v-model="showOverlay3" bg-color="rgba(0, 0, 0, 0.9)">
+        <div class="overlay__container">
+          <w-button
+            class="close__overlay"
+            bg-color="white"
+            color="black"
+            lg
+            dark
+            @click="showOverlay3 = false"
           >
-          <br />
-          <br />
+            <w-icon>wi-cross</w-icon>
+          </w-button>
+          <LohnrechnerP></LohnrechnerP>
         </div>
-        <div class="md2">
-          <span class="title2">Tools:</span>
-          <ul class="mx5">
-            <li><w-icon l>mdi mdi-language-javascript</w-icon>JavaScript</li>
-            <li><w-icon>mdi mdi-language-html5</w-icon>HTML5</li>
-            <li><w-icon l>mdi mdi-sass</w-icon>Sass</li>
-            <li><w-icon l>mdi mdi-vuejs</w-icon>Vue.js</li>
-            <li>Vue-Router</li>
-          </ul>
+      </w-overlay>
+      <w-button
+        class="project__button"
+        bg-color="black"
+        dark
+        @click="showOverlay2 = true"
+      >
+        Kanbanboard App
+      </w-button>
+
+      <w-overlay v-model="showOverlay2" bg-color="rgba(0, 0, 0, 0.9)">
+        <div class="overlay__container">
+          <w-button
+            class="close__overlay"
+            bg-color="white"
+            color="black"
+            lg
+            dark
+            @click="showOverlay2 = false"
+          >
+            <w-icon>wi-cross</w-icon>
+          </w-button>
+          <KanbanPVue></KanbanPVue>
         </div>
-      </w-flex>
-      <template #actions>
-        <w-flex wrap class="text-center">
-          <div class="xs6">
-            <a
-              href="https://pietro-s-pizzeria.web.app/main"
-              rel="noopener"
-              target="_blank"
-            >
-              <w-button
-                class="link__button"
-                bg-color="blue-light2"
-                color="black"
-                ><w-icon class="mr2" color="black">mdi mdi-desktop-mac</w-icon>
-                Demo</w-button
-              >
-            </a>
-          </div>
-          <div class="xs6">
-            <a
-              href="https://github.com/Mirza-bot/pietro_pizzeria"
-              rel="noopener"
-              target="_blank"
-            >
-              <w-button
-                class="link__button"
-                bg-color="blue-light2"
-                color="black"
-              >
-                <w-icon class="mr2" color="black">mdi mdi-code-braces</w-icon
-                >Code
-              </w-button>
-            </a>
-          </div>
-        </w-flex>
-      </template>
-    </w-card>
-    <div>
-      <w-divider color="white" class="mb3"></w-divider>
-      <span class="headline mb2">{{ $t("projects.project3.title") }}</span>
-      <w-card class="mt3" no-border>
-        <img
-          :src="projectImg3"
-          class="mobile__gif sh6"
-          alt="lohnrechnerdemo_bild"
-        />
-        <br />
-        <w-flex wrap>
-          <div class="md10 mb5 pr5">
-            <span class="title2">{{ $t("projects.description") }}</span
-            ><br /><br />
-            {{ $t("projects.project3.descriptionContent") }}
-            <br />
-            <br />
-            <span class="description"
-              >Responsive: {{ $t("projects.project3.responsive") }}</span
-            >
-          </div>
-          <br />
-          <br />
-          <div class="md2">
-            <span class="title2">Tools:</span>
-            <ul class="mx5">
-              <li><w-icon>mdi mdi-language-html5</w-icon>HTML5</li>
-              <li><w-icon l>mdi mdi-language-css3</w-icon>CSS</li>
-              <li><w-icon l>mdi mdi-language-typescript</w-icon>TypeScript</li>
-              <li><w-icon l>mdi mdi-vuejs</w-icon>Vue.js</li>
-              <li>Vue-Router</li>
-              <li>Ionic-Framework</li>
-            </ul>
-          </div>
-        </w-flex>
-        <template #actions>
-          <w-flex wrap class="text-center mt5">
-            <div class="xs12">
-              <a
-                href="https://github.com/Mirza-bot/Lohn-Rechner"
-                rel="noopener"
-                target="_blank"
-              >
-                <w-button
-                  class="link__button"
-                  bg-color="blue-light2"
-                  color="black"
-                >
-                  <w-icon class="mr2" color="black">mdi mdi-code-braces</w-icon>
-                  Code</w-button
-                >
-              </a>
-            </div>
-          </w-flex>
-        </template>
-      </w-card>
-    </div>
-    <div>
-      <w-divider color="white" class="mb3"></w-divider>
-      <span class="headline mb1">{{ $t("projects.project4.title") }}</span>
-      <w-card :image="`${projectImg4}`" class="mt3" no-border color="white">
-        <br />
-        <w-flex wrap>
-          <div class="md10 mb5 pr5">
-            <span class="title2"
-              >{{ $t("projects.description") }} <br /><br />
-            </span>
-            {{ $t("projects.project4.descriptionContent") }}
-            <br />
-            <br />
-            <span class="description"
-              >Responsive: {{ $t("projects.project4.responsive") }}</span
-            >
-          </div>
-          <div class="md2">
-            <span class="title2">Tools:</span>
-            <ul class="mx5">
-              <li><w-icon l>mdi mdi-language-javascript</w-icon>JavaScript</li>
-              <li><w-icon>mdi mdi-language-html5</w-icon>HTML5</li>
-              <li><w-icon l>mdi mdi-sass</w-icon>Sass</li>
-              <li><w-icon l>mdi mdi-vuejs</w-icon>Vue.js</li>
-              <li>Vue-Router</li>
-              <li>Wave-UI</li>
-            </ul>
-          </div>
-        </w-flex>
-        <template #actions>
-          <w-flex wrap class="flex text-center mt5">
-            <div class="xs12">
-              <a
-                href="https://github.com/Mirza-bot/mein_portfolio"
-                rel="noopener"
-                target="_blank"
-              >
-                <w-button
-                  class="link__button"
-                  bg-color="blue-light2"
-                  color="black"
-                  ><w-icon class="mr2" color="black"
-                    >mdi mdi-code-braces</w-icon
-                  >
-                  Code
-                </w-button>
-              </a>
-            </div>
-          </w-flex>
-        </template>
-      </w-card>
+      </w-overlay>
+      <w-button
+        class="project__button"
+        bg-color="black"
+        dark
+        @click="showOverlay1 = true"
+      >
+        Pietros Pizzeria
+      </w-button>
+
+      <w-overlay v-model="showOverlay1" bg-color="rgba(0, 0, 0, 0.9)">
+        <div class="overlay__container">
+          <w-button
+            class="close__overlay"
+            bg-color="white"
+            color="black"
+            lg
+            dark
+            @click="showOverlay1 = false"
+          >
+            <w-icon>wi-cross</w-icon>
+          </w-button>
+          <PietrosP></PietrosP>
+        </div>
+      </w-overlay>
     </div>
   </div>
 </template>
 
 <script>
-import KanbanImg from '../images/kanban.webp'
-import PizzeriaImg from '../images/pietros pizzeria.webp'
-import SalaryCalcImg from '../images/lohnrechner.webp'
-import PortfolioImg from '../images/Portfolio.webp'
+import KanbanPVue from "../components/layout/KanbanP.vue";
+import PietrosP from "../components/layout/PietrosP.vue";
+import LohnrechnerP from "../components/layout/LohnrechnerP.vue";
+import PortfolioP from "../components/layout/PortfolioP.vue";
 export default {
+  components: { KanbanPVue, PietrosP, LohnrechnerP, PortfolioP },
   data: () => ({
-    projectImg1: KanbanImg,
-    projectImg2: PizzeriaImg,
-    projectImg3: SalaryCalcImg,
-    projectImg4: PortfolioImg,
+    showOverlay1: false,
+    showOverlay2: false,
+    showOverlay3: false,
+    showOverlay4: false,
   }),
 };
 </script>
@@ -260,14 +124,16 @@ export default {
 @import "../assets/styles";
 div.page__container {
   font-family: "Roboto Condensed", sans-serif;
-  width: 80vw;
-  margin: 15vh auto 5vh auto;
+  width: 60vw;
+  margin: 10vh auto 5vh auto;
   @media only screen and (min-width: 2100px) {
     font-size: 2rem;
   }
+  @media only screen and (max-width: 1100px) {
+    width: 90vw;
+  }
   div.page__header {
     display: block;
-    margin: auto auto 5vh auto;
     h2 {
       font-size: 3rem;
       text-shadow: -3px 3px 3px black;
@@ -279,53 +145,34 @@ div.page__container {
       margin: 0;
     }
   }
-  ul {
-    list-style-type: none;
-    @media only screen and (min-width: 2100px) {
-      font-size: 2rem;
-    }
-  }
 }
 
-div.md5 {
-  min-height: 80vh;
+div.page__body {
+  background-color: white;
 }
 
-img.mobile__gif {
-  margin: 5% auto 5% 30vw;
-  max-width: 15vw;
-  border: 1px solid black;
-  border-radius: 45px;
-  @media only screen and (max-width: 900px) {
-    margin: auto auto 5vh 10vw;
-    max-width: 60vw;
-    border-radius: 35px;
-  }
-  @media only screen and (min-width: 2100px) {
-    transform: scale(1.3);
-  }
+button.project__button {
+  width: 90%;
+  height: 50px;
+  margin: 20px 5%;
+  font-size: 1.5rem;
 }
 
-span.title2 {
-  @media only screen and (min-width: 2100px) {
-    font-size: 2.5rem;
-  }
-}
-span.headline {
-  @media only screen and (min-width: 2100px) {
-    font-size: 4rem;
-  }
-}
-
-.link__button {
-  transform: scale(2);
-  margin-bottom: 2rem;
-  @media only screen and (min-width: 2100px) {
-    transform: scale(3.5);
-    margin-bottom: 3rem;
-  }
+div.overlay__container {
+  position: absolute;
+  top: 50px;
+  left: auto;
+  max-width: 50vw;
+  height: 60vh;
   @media only screen and (max-width: 1100px) {
-    transform: scale(1.5);
+    min-width: 99vw;
+    top: 2vh;
   }
+}
+
+button.close__overlay {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 </style>

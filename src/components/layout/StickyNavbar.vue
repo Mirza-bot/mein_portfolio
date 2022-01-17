@@ -1,13 +1,6 @@
 <template>
   <header>
-    <div>
-      <w-icon xl color="transparent" class="my4"> mdi mdi-github </w-icon
-      ><span>GitHub</span><br />
-    </div>
-    <div class="linkedin__link my4">
-      <w-icon xl color="transparent"> mdi mdi-linkedin </w-icon
-      ><span>LinkedIn</span><br />
-    </div>
+    <span></span>
   </header>
 </template>
 
@@ -15,18 +8,20 @@
 @import "../../assets/styles";
 
 header {
-  color: transparent;
-  background: $mainGradient;
-  box-shadow: 0px 4px 4px black;
+  background-color: $mainColor;
+  backdrop-filter: blur(20px) saturate(160%) contrast(100%) brightness(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%) contrast(100%) brightness(140%);
   width: 100vw;
-  z-index: 100;
+  height: 12vh;
+  z-index: 140;
   position: sticky;
   position: -webkit-sticky;
-  top: 0vh;
+  top: -20px;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 1.5rem;
   @media only screen and (min-width: 2100px) {
     font-size: 4rem;
+    height: 10vh;
   }
   @media only screen and (max-width: 1100px) {
     font-size: 0.8rem;

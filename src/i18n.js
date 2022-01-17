@@ -12,9 +12,9 @@ const i18n = createI18n({
           contact: "Kontakt",
         },
         welcome: {
-          headline: "Willkommen!",
-          headline2: "Mein Name ist Mirza Malkoc",
-          headline3: "Ich bin ein Front-End-Entwickler aus Wien",
+          headline: "Mirza Malkoc",
+          headline2: "Web Entwickler",
+          headline3: "Ich bin ein Web entwickler aus Wien, Österreich. Auch wenn ich eigentlich eine Ausbildung als Oberflächentechniker abgeschlossen habe, ist Programmieren meine Leidenschaft und mein Karriereweg. Das Entwickeln von Applikationen begeistert mich jeden Tag aufs neue.",
           button: "Projekte",
         },
         projects: {
@@ -62,7 +62,7 @@ const i18n = createI18n({
             bosnian: "Bosnisch"
           },
           personalText:
-            "Als Entwickler ist mir Weiterbildung ein wichtiges Anliegen. Jedoch bin ich überzeugt, dass man nicht alles wissen muss, man muss nur einmal über den Horizont geschaut haben, um zu wissen, wo man nachsehen muss.",
+            "Von dem Moment an dem ich “Hallo Welt” in der Konsole meiner ersten Applikation ausgab, wusste ich das der Weg der Softwareentwicklung der meiner Wahl werden würde. Doch Softwareentwicklung war nie einfach nur ein Karriereweg für mich, sondern eine Leidenschaft welche mir die Herausforderung bietet mich stetig weiter zu entwickeln und meine Fähigkeiten in der Entwicklung hoch qualitativer Software zu verbessern.",
         },
         contact: {
           headline: "Kontaktieren Sie mich.",
@@ -82,9 +82,9 @@ const i18n = createI18n({
           contact: "Contact",
         },
         welcome: {
-          headline: "Welcome!",
-          headline2: "My name is Mirza Malkoc",
-          headline3: "I'm a Front-End-Developer from Vienna",
+          headline: "Mirza Malkoc",
+          headline2: "web developer",
+          headline3: "I'm a web developer from Vienna, Austria. Even though I actually completed my training as a surface technician, programming is my passion and my career path. The development of applications inspires me anew every day.",
           button: "Projects",
         },
         projects: {
@@ -121,7 +121,7 @@ const i18n = createI18n({
           skills: {
             headline: "SKILLS:",
             skill1: "Analytical thinking",
-            skill2: "Willingess to learn",
+            skill2: "Willingness to learn",
             skill3: "Teamplayer",
             skill4: "Structured working",
           },
@@ -132,7 +132,7 @@ const i18n = createI18n({
             bosnian: "Bosnian"
           },
           personalText:
-            "As a developer, continuing education is very important to me. However, I am convinced that you don't have to know everything, you just have to peek over the horizon at least once to know where to look.",
+            "From the moment I typed out 'Hello World' in the console of my first application, I knew that the path of software development would become my choice. However, software development was never just a career path for me, but a passion that offers me the challenge of constantly developing myself and improving my skills in the development of high-quality software.",
         },
         contact: {
           headline: "Contact me.",

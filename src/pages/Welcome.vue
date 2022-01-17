@@ -1,10 +1,11 @@
 <template>
   <section>
     <div class="image__container">
+      <w-icon class="main__icon" xl color="white"> mdi mdi-monitor-cellphone </w-icon>
       <div class="front__font">
         <h1 class="headline">{{ $t("welcome.headline") }}</h1>
         <h2 class="title2">{{ $t("welcome.headline2") }}</h2>
-        <h3 class="title2">{{ $t("welcome.headline3") }}</h3>
+        <h3 class="title3 mt3">{{ $t("welcome.headline3") }}</h3>
       </div>
       <div class="guidance__arrow" @click="redirect('main', '#projects')">
         <w-icon color="white">mdi mdi-arrow-down-bold-circle-outline</w-icon>
@@ -30,20 +31,23 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/styles";
+
+section {
+  height: 100vh;
+}
 div.image__container {
   height: 110vh;
   width: 100vw;
-  padding: 0 10vw 0 10vw;
   display: inline-block;
-  color: $mainColor;
-  z-index: 200;
+  z-index: 100;
   position: static;
   text-align: center;
   font-family: "Roboto Condensed";
   background-image: linear-gradient(
-      90deg,
+      180deg,
       rgb(0, 0, 0) 0.33%,
-      rgba(0, 0, 0, 0.823) 50%,
+      rgba(0, 0, 0, 0.823) 40%,
+      rgba(0, 0, 0, 1) 70%,
       rgb(0, 0, 0) 99.77%
     ),
     url("../images/cover.webp");
@@ -56,9 +60,29 @@ div.image__container {
     font-size: 1rem;
   }
 
-  div.front__font {
-    position: sticky;
+  .main__icon {
     top: 30%;
+    left: 25vw;
+    position: fixed;
+    font-size: 8rem;
+    animation: fadeRight 1s ease-in-out forwards;
+    @media only screen and (min-width: 2100px) {
+      top: 20%;
+      left: 21vw;
+      font-size: 15rem;
+    }
+    @media only screen and (max-width: 1100px) {
+      top: 10%;
+      left: 30%;
+      font-size: 10rem;
+    }
+  }
+
+  div.front__font {
+    position: absolute;
+    display: inline-block;
+    top: 30%;
+    left: 35vw;
     caret-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -68,6 +92,13 @@ div.image__container {
     -ms-user-select: none;
     text-align: start;
     overflow: hidden;
+    @media only screen and (max-width: 1100px) {
+      top: 30%;
+      left: 10px;
+    }
+    @media only screen and (min-width: 2100px) {
+      left: 21vw;
+    }
 
     h1 {
       color: white;
@@ -77,29 +108,32 @@ div.image__container {
         font-size: 4rem;
       }
       @media only screen and (max-width: 1100px) {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
     }
     h2 {
-      font-size: 3rem;
-      animation: fadeLeft 0.5s ease-in-out forwards;
+      font-size: 4rem;
+      animation: fadeLeft 1s ease-in-out forwards;
       @media only screen and (min-width: 2100px) {
         font-size: 6rem;
       }
       @media only screen and (max-width: 1100px) {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
       }
     }
 
     h3 {
       color: white;
-      font-size: 2rem;
-      animation: fadeUp 0.8s ease-in-out forwards;
+      font-size: 1.5rem;
+      animation: fadeUp 1s ease-in-out forwards;
+      max-width: 600px;
       @media only screen and (min-width: 2100px) {
         font-size: 4rem;
+        max-width: 1200px;
       }
       @media only screen and (max-width: 1100px) {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        max-width: 340px;
       }
     }
   }
@@ -107,7 +141,13 @@ div.image__container {
   @keyframes fadeDown {
     from {
       opacity: 0;
-      transform: translateY(-10px);
+      transform: translateY(-20px);
+    }
+  }
+  @keyframes fadeRight {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
     }
   }
 
@@ -134,7 +174,6 @@ div.guidance__arrow {
   animation: levitate 1.5s ease-in-out infinite;
   :hover {
     cursor: pointer;
-    color: #48a8f5;
   }
   @media only screen and (max-width: 1100px) {
     left: 43vw;

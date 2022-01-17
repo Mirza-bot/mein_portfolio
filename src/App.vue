@@ -2,13 +2,9 @@
   <w-app>
     <main>
       <welcome></welcome>
-      <sticky-navbar></sticky-navbar>
+      <sticky-navbar v-show="mobileScreen"></sticky-navbar>
       <the-header></the-header>
-      <router-view v-slot="{ Component }">
-        <transition name="cover" mode="in-out">
-          <component :is="Component"></component>
-        </transition>
-      </router-view>
+      <router-view></router-view>
     </main>
   </w-app>
 </template>
@@ -17,8 +13,24 @@
 import TheHeader from "./components/layout/TheHeader.vue";
 import Welcome from "./pages/Welcome.vue";
 import StickyNavbar from "./components/layout/StickyNavbar.vue";
+import { computed } from '@vue/reactivity';
 export default {
   components: { TheHeader, Welcome, StickyNavbar },
+    setup() {
+
+
+    const windowWidth = window.innerWidth
+
+    const mobileScreen = computed(() => {
+      if (windowWidth < 1100) {
+        return false
+      } else return true
+    })
+
+    return {
+      mobileScreen,
+    }
+  }
 };
 </script>
 
