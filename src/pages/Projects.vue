@@ -128,6 +128,7 @@ div.page__container {
   margin: 10vh auto 5vh auto;
   @media only screen and (min-width: 2100px) {
     font-size: 2rem;
+    padding-top: 5vh;
   }
   @media only screen and (max-width: 1100px) {
     width: 90vw;
@@ -156,16 +157,22 @@ button.project__button {
   height: 50px;
   margin: 20px 5%;
   font-size: 1.5rem;
+  @media only screen and (min-width: 2100px) {
+    font-size: 2rem;
+  }
 }
 
 div.overlay__container {
   position: absolute;
   top: 50px;
   left: auto;
-  max-width: 50vw;
-  height: 60vh;
+  width: 1000px;
   @media only screen and (max-width: 1100px) {
-    min-width: 99vw;
+    width: 99vw;
+    top: 2vh;
+  }
+  @media only screen and (min-width: 2100px) {
+    max-width: 1400px;
     top: 2vh;
   }
 }

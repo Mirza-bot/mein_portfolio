@@ -14,7 +14,7 @@ const i18n = createI18n({
         welcome: {
           headline: "Mirza Malkoc",
           headline2: "Web Entwickler",
-          headline3: "Ich bin ein Web entwickler aus Wien, Österreich. Auch wenn ich eigentlich eine Ausbildung als Oberflächentechniker abgeschlossen habe, ist Programmieren meine Leidenschaft und mein Karriereweg. Das Entwickeln von Applikationen begeistert mich jeden Tag aufs neue.",
+          headline3: "Ich bin ein Webentwickler aus Wien, Österreich. Auch wenn ich eigentlich eine Ausbildung als Oberflächentechniker abgeschlossen habe, ist Programmieren meine Leidenschaft und mein Karriereweg. Das Entwickeln von Applikationen begeistert mich jeden Tag aufs neue.",
           button: "Projekte",
         },
         projects: {
@@ -62,7 +62,7 @@ const i18n = createI18n({
             bosnian: "Bosnisch"
           },
           personalText:
-            "Von dem Moment an dem ich “Hallo Welt” in der Konsole meiner ersten Applikation ausgab, wusste ich das der Weg der Softwareentwicklung der meiner Wahl werden würde. Doch Softwareentwicklung war nie einfach nur ein Karriereweg für mich, sondern eine Leidenschaft welche mir die Herausforderung bietet mich stetig weiter zu entwickeln und meine Fähigkeiten in der Entwicklung hoch qualitativer Software zu verbessern.",
+            "Von dem Moment an dem ich “Hallo Welt” in der Konsole meiner ersten Applikation ausgab wusste ich, dass der Weg der Softwareentwicklung der meiner Wahl werden würde. Doch Softwareentwicklung war nie einfach nur ein Karriereweg für mich, sondern eine Leidenschaft welche mir die Herausforderung bietet mich stetig weiter zu entwickeln und meine Fähigkeiten in der Entwicklung hoch qualitativer Software zu verbessern.",
         },
         contact: {
           headline: "Kontaktieren Sie mich.",

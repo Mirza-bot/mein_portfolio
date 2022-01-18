@@ -3,28 +3,30 @@
     <div>
       <h1 class="headline">{{ $t("aboutMe.headline") }}</h1>
     </div>
-    <w-flex wrap class="text-center aboutme_background">
-      <div class="person__container mxa py12">
-        <img
-          class="person__image bdrsm bd6 sh5"
-          src="../images/Mirza.webp"
-          alt="Portfolio Picture"
-        />
-        <br />
-        <ul class="name_plate mb10">
-          <li>
-            <span class="text-bold name_plate">Mirza MALKOC</span>
-          </li>
-          <li>{{ $t("aboutMe.age") }}</li>
-          <li>{{ $t("aboutMe.livingIn") }}</li>
-        </ul>
-      </div>
-      <div class="about_me_text mxa">
-        <p class="personal__text">
-          {{ $t("aboutMe.personalText") }}
-        </p>
-      </div>
-    </w-flex>
+    <div class="aboutme_background">
+      <w-flex wrap class="text-center">
+        <div class="person__container mxa py12">
+          <img
+            class="person__image bdrsm bd6 sh5"
+            src="../images/Mirza.webp"
+            alt="Portfolio Picture"
+          />
+          <br />
+          <ul class="name_plate mb10">
+            <li>
+              <span class="text-bold name_plate">Mirza MALKOC</span>
+            </li>
+            <li>{{ $t("aboutMe.age") }}</li>
+            <li>{{ $t("aboutMe.livingIn") }}</li>
+          </ul>
+        </div>
+        <div class="about_me_text mxa">
+          <p class="personal__text">
+            {{ $t("aboutMe.personalText") }}
+          </p>
+        </div>
+      </w-flex>
+    </div>
     <div class="mt10">
       <h1 class="headline">{{ $t("aboutMe.headline2") }}</h1>
       <w-divider color="white" />
@@ -88,6 +90,9 @@ div.page__container {
     width: 90vw;
     margin: 0 auto;
   }
+  @media only screen and (min-width: 2100px) {
+    padding-top: 5vh;
+  }
   h1.headline {
     font-size: 3rem;
     font-weight: 900;
@@ -123,6 +128,11 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  li {
+    @media only screen and (min-width: 2100px) {
+    font-size: 3rem;
+  }
+  }
 }
 
 .text-center {
@@ -174,11 +184,15 @@ ul.name_plate {
 }
 
 .aboutme_background {
-  background: radial-gradient(circle, rgba(0,0,0,0.7) 50%, rgba(0,0,0,1) 63%),
+  background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(0, 0, 0, 1) 60%
+    ),
     url("../images/Vienna.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 2%;
+    border: 5px solid white;
 }
 
 div.about_me_text {
@@ -187,7 +201,7 @@ div.about_me_text {
 
 p.personal__text {
   font-size: 1.5rem;
-  border: 2px solid white;
+  border-top: 5px solid white;
   padding: 20px;
   @media only screen and (min-width: 2100px) {
     font-size: 3rem;

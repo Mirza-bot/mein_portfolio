@@ -21,7 +21,7 @@ header {
   font-size: 1.5rem;
   @media only screen and (min-width: 2100px) {
     font-size: 4rem;
-    height: 10vh;
+    height: 15vh;
   }
   @media only screen and (max-width: 1100px) {
     font-size: 0.8rem;

@@ -67,7 +67,7 @@ div.image__container {
     font-size: 8rem;
     animation: fadeRight 1s ease-in-out forwards;
     @media only screen and (min-width: 2100px) {
-      top: 20%;
+      top: 15%;
       left: 21vw;
       font-size: 15rem;
     }
@@ -129,7 +129,7 @@ div.image__container {
       max-width: 600px;
       @media only screen and (min-width: 2100px) {
         font-size: 4rem;
-        max-width: 1200px;
+        max-width: 1600px;
       }
       @media only screen and (max-width: 1100px) {
         font-size: 1.2rem;

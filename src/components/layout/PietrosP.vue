@@ -10,7 +10,7 @@
     >
       <br />
       <w-flex wrap class="my3">
-        <div class="md10 pr5">
+        <div class="md9">
           <span class="title2">{{ $t("projects.description") }}</span
           ><br /><br />
           {{ $t("projects.project2.descriptionContent") }}
@@ -22,7 +22,7 @@
           <br />
           <br />
         </div>
-        <div class="md2">
+        <div class="md3">
           <span class="title2">Tools:</span>
           <ul class="mx5">
             <li><w-icon l>mdi mdi-language-javascript</w-icon>JavaScript</li>
@@ -79,11 +79,18 @@ export default {
 ul {
   list-style-type: none;
   @media only screen and (min-width: 2100px) {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-top: 30px;
   }
-    li {
-      float: left;
-      margin-right: 1rem;
+  @media only screen and (min-width: 1100px) {
+    margin-top: 20px;
+  }
+    @media only screen and (max-width: 1100px) {
+    
+      li {
+        float: left;
+        margin-right: 5px;
+        }
     }
 }
 
@@ -99,10 +106,10 @@ span.headline {
 }
 
 .link__button {
-  transform: scale(2);
+  transform: scale(1.5);
   margin-bottom: 2rem;
   @media only screen and (min-width: 2100px) {
-    transform: scale(3.5);
+    transform: scale(3);
     margin-bottom: 3rem;
   }
   @media only screen and (max-width: 1100px) {

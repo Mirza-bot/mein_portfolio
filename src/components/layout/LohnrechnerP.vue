@@ -11,7 +11,7 @@
       />
       <br />
       <w-flex wrap>
-        <div class="md10 mb1 pr5">
+        <div class="md9">
           <span class="title2">{{ $t("projects.description") }}</span
           ><br /><br />
           {{ $t("projects.project3.descriptionContent") }}
@@ -23,9 +23,9 @@
         </div>
         <br />
         <br />
-        <div class="md2">
+        <div class="md3">
           <span class="title2">Tools:</span>
-          <ul class="mx5">
+          <ul class="mx4">
             <li><w-icon>mdi mdi-language-html5</w-icon>HTML5</li>
             <li><w-icon l>mdi mdi-language-css3</w-icon>CSS</li>
             <li><w-icon l>mdi mdi-language-typescript</w-icon>TypeScript</li>
@@ -36,7 +36,7 @@
         </div>
       </w-flex>
       <template #actions>
-        <w-flex wrap class="text-center mt5">
+        <w-flex wrap class="text-center">
           <div class="xs12">
             <a
               href="https://github.com/Mirza-bot/Lohn-Rechner"
@@ -69,12 +69,19 @@ export default {
 ul {
   list-style-type: none;
   @media only screen and (min-width: 2100px) {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-top: 30px;
   }
-  li {
-    float: left;
-    margin-right: 1rem;
+  @media only screen and (min-width: 1100px) {
+    margin-top: 20px;
   }
+    @media only screen and (max-width: 1100px) {
+    
+      li {
+        float: left;
+        margin-right: 5px;
+        }
+    }
 }
 
 span.title2 {
@@ -89,11 +96,11 @@ span.headline {
 }
 
 .link__button {
-  transform: scale(2);
-  margin-bottom: 30px;
+  transform: scale(1.5);
+  margin-bottom: 15px;
   @media only screen and (min-width: 2100px) {
-    transform: scale(3.5);
-    margin-bottom: 3rem;
+    transform: scale(3);
+    margin-bottom: 40px;
   }
   @media only screen and (max-width: 1100px) {
     transform: scale(1.5);
@@ -112,7 +119,9 @@ img.mobile__gif {
     border-radius: 15px;
   }
   @media only screen and (min-width: 2100px) {
-    transform: scale(1.3);
+    margin-left: 40%;
+    border-radius: 40px;
+    max-width: 230px;
   }
 }
 
