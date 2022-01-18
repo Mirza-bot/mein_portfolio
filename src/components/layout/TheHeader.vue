@@ -175,7 +175,7 @@
               </div>
               <div class="box">
                 <ul>
-                  <li class="pl1">
+                  <li class="px2">
                     <a
                       href="https://github.com/Mirza-bot"
                       rel="noopener"
@@ -185,7 +185,7 @@
                       <span>GitHub</span>
                     </a>
                   </li>
-                  <li>
+                  <li class="px1">
                     <a
                       href="https://www.linkedin.com/in/mirzamalkoc/"
                       rel="noopener"
@@ -195,7 +195,7 @@
                       <span>LinkedIn</span>
                     </a>
                   </li>
-                  <li class="pl1">
+                  <li class="px2">
                     <a href="mailto:malkoc.mirza.95@gmail.com">
                       <w-icon xl color="black"> mdi mdi-email </w-icon> <br />
                       <span>E-Mail</span>
@@ -409,13 +409,13 @@ div.other__links {
 
 div.box {
   text-align: center;
-  margin: 3vh 2vw 5vw 2vw;
+  margin: 2vh 2vw 1vh 2vw;
   font-family: "Roboto Condensed", sans-serif;
   color: black;
   ul {
     list-style: none;
     li {
-      margin: 40px 0 20px 0;
+      margin: 20px 5px;
       @media only screen and (max-width: 400px) {
         font-size: 0.7rem;
         margin: 15px 0 10px 10px;
