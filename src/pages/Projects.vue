@@ -4,6 +4,12 @@
       <h2 class="animate_color_gradient">{{ $t("projects.headline") }}</h2>
     </div>
     <div class="page__body bd3 bdrs1">
+      <div style="color: black; font-size: 2rem">
+        <span>
+          <w-icon style="margin: -5px -10px 0 0"> mdi mdi-arrow-up-bold-box-outline </w-icon>
+          {{ $t("projects.latest") }}</span
+        >
+      </div>
       <w-button
         class="project__button"
         bg-color="black"

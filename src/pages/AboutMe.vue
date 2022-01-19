@@ -1,7 +1,9 @@
 <template>
   <div class="page__container" id="#aboutme">
     <div>
-      <h1 class="headline animate_color_gradient">{{ $t("aboutMe.headline") }}</h1>
+      <h1 class="headline animate_color_gradient">
+        {{ $t("aboutMe.headline") }}
+      </h1>
     </div>
     <div class="aboutme_background">
       <w-flex wrap class="text-center">
@@ -24,11 +26,25 @@
           <p class="personal__text">
             {{ $t("aboutMe.personalText") }}
           </p>
+          <div class="resumee__download bdrs1">
+            <strong class="ml3">{{ $t("aboutMe.resume") }}</strong>
+            <a
+              :href="Resume"
+              download="Malkoc_Mirza_Lebenslauf.pdf"
+            >
+              <w-button class="download__button ml3 bdrs1" bg-color="black"
+                ><w-icon class="mr2" color="white">mdi mdi-download</w-icon
+                ><span> Download </span>
+              </w-button>
+            </a>
+          </div>
         </div>
       </w-flex>
     </div>
     <div class="mt10">
-      <h1 class="headline animate_color_gradient">{{ $t("aboutMe.headline2") }}</h1>
+      <h1 class="headline animate_color_gradient">
+        {{ $t("aboutMe.headline2") }}
+      </h1>
       <w-divider color="white" />
     </div>
     <w-flex wrap class="text-center">
@@ -59,6 +75,7 @@ import WaveImg from "../images/wave-ui.webp";
 import SEOImg from "../images/SEO.jpg";
 import GitImg from "../images/Git-Icon.png";
 import RespImg from "../images/Responsive.png";
+import Resume from "../assets/documents/Mirza's public Resume.pdf"
 export default {
   setup() {
     const badges = [
@@ -74,6 +91,7 @@ export default {
 
     return {
       badges,
+      Resume
     };
   },
 };
@@ -129,8 +147,8 @@ ul {
   padding: 0;
   li {
     @media only screen and (min-width: 2100px) {
-    font-size: 3rem;
-  }
+      font-size: 3rem;
+    }
   }
 }
 
@@ -191,7 +209,7 @@ ul.name_plate {
     url("../images/Vienna.webp");
   background-repeat: no-repeat;
   background-size: cover;
-    border: 5px solid white;
+  border: 5px solid white;
 }
 
 div.about_me_text {
@@ -201,9 +219,36 @@ div.about_me_text {
 p.personal__text {
   font-size: 1.5rem;
   border-top: 5px solid white;
-  padding: 20px;
+  padding: 10px;
   @media only screen and (min-width: 2100px) {
     font-size: 3rem;
+  }
+}
+
+div.resumee__download {
+  background-color: white;
+  color: black;
+  display: inline-block;
+  padding: 5px;
+  margin: 20px 0;
+  font-size: 1.8rem;
+  @media only screen and (min-width: 2100px) {
+    font-size: 3.7rem;
+    padding: 10px;
+  }
+  @media only screen and (max-width: 1100px) {
+    font-size: 1.5rem;
+    padding: 15px;
+    margin: 5px 5px;
+  }
+  .download__button {
+    color: white;
+    font-size: 1.5rem;
+    padding: 20px 10px;
+    @media only screen and (min-width: 2100px) {
+      font-size: 3rem;
+      padding: 40px 20px;
+    }
   }
 }
 </style>

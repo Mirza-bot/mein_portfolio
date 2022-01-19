@@ -19,6 +19,7 @@ const i18n = createI18n({
         },
         projects: {
           headline: "Projekte",
+          latest: "Neueste",
           description: "Beschreibung:",
           project1: {
             descriptionContent:
@@ -63,6 +64,7 @@ const i18n = createI18n({
           },
           personalText:
             "Von dem Moment an dem ich “Hallo Welt” in der Konsole meiner ersten Applikation ausgab wusste ich, dass der Weg der Softwareentwicklung der meiner Wahl werden würde. Doch Softwareentwicklung war nie einfach nur ein Karriereweg für mich, sondern eine Leidenschaft welche mir die Herausforderung bietet mich stetig weiter zu entwickeln und meine Fähigkeiten in der Entwicklung hoch qualitativer Software zu verbessern.",
+          resume: "Lebenslauf"
         },
         contact: {
           headline: "Kontaktieren Sie mich.",
@@ -89,6 +91,7 @@ const i18n = createI18n({
         },
         projects: {
           headline: "Projects",
+          latest: "Latest",
           description: "Description:",
           project1: {
             descriptionContent:
@@ -133,6 +136,7 @@ const i18n = createI18n({
           },
           personalText:
             "From the moment I typed out 'Hello World' in the console of my first application, I knew that the path of software development would become my choice. However, software development was never just a career path for me, but a passion that offers me the challenge of constantly developing myself and improving my skills in the development of high-quality software.",
+          resume: "Resume"
         },
         contact: {
           headline: "Contact me.",

@@ -36,7 +36,7 @@ section {
   height: 100vh;
 }
 div.image__container {
-  height: 100vh;
+  height: 105vh;
   width: 100vw;
   display: inline-block;
   z-index: 100;
@@ -71,14 +71,12 @@ div.image__container {
     font-size: 5rem;
     animation: fadeRight 1s ease-in-out forwards;
     @media only screen and (min-width: 2100px) {
-      top: 15%;
+      top: 13%;
       left: 21vw;
       font-size: 15rem;
     }
     @media only screen and (max-width: 1100px) {
-      top: 10%;
-      left: 30%;
-      font-size: 10rem;
+      display: none;
     }
   }
 
@@ -98,7 +96,7 @@ div.image__container {
     overflow: hidden;
     @media only screen and (max-width: 1100px) {
       top: 30%;
-      left: 10px;
+      left: 10vw;
     }
     @media only screen and (min-width: 2100px) {
       left: 21vw;
