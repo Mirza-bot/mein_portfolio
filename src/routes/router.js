@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 
 //Pages
 import MainPage from "../pages/MainPage.vue";
-import NotFound from "../pages/NotFound.vue";
 
 // import Welcome from "../pages/Welcome.vue";
 import Admin from "../pages/Admin.vue";
@@ -16,7 +15,7 @@ const router = createRouter({
       name: "main",
       component: MainPage,
     },
-    { path: "/:notFound(.*)", component: NotFound },
+    { path: "/:notFound(.*)", redirect: "/main" },
     { path: "/admin_login", component: Admin },
   ],
   scrollBehavior(to, from, savedPosition) {

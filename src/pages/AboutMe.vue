@@ -1,7 +1,7 @@
 <template>
   <div class="page__container" id="#aboutme">
     <div>
-      <h1 class="headline">{{ $t("aboutMe.headline") }}</h1>
+      <h1 class="headline animate_color_gradient">{{ $t("aboutMe.headline") }}</h1>
     </div>
     <div class="aboutme_background">
       <w-flex wrap class="text-center">
@@ -28,7 +28,7 @@
       </w-flex>
     </div>
     <div class="mt10">
-      <h1 class="headline">{{ $t("aboutMe.headline2") }}</h1>
+      <h1 class="headline animate_color_gradient">{{ $t("aboutMe.headline2") }}</h1>
       <w-divider color="white" />
     </div>
     <w-flex wrap class="text-center">
@@ -96,7 +96,6 @@ div.page__container {
   h1.headline {
     font-size: 3rem;
     font-weight: 900;
-    text-shadow: -3px 3px 3px black;
     @media only screen and (min-width: 2100px) {
       font-size: 5rem;
     }
@@ -189,7 +188,7 @@ ul.name_plate {
       rgba(0, 0, 0, 0.7) 50%,
       rgba(0, 0, 0, 1) 60%
     ),
-    url("../images/Vienna.jpg");
+    url("../images/Vienna.webp");
   background-repeat: no-repeat;
   background-size: cover;
     border: 5px solid white;

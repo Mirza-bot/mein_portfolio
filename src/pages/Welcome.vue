@@ -1,14 +1,14 @@
 <template>
   <section>
     <div class="image__container">
-      <w-icon class="main__icon" xl color="white"> mdi mdi-monitor-cellphone </w-icon>
+      <w-icon class="main__icon"> mdi mdi-monitor-cellphone </w-icon>
       <div class="front__font">
         <h1 class="headline">{{ $t("welcome.headline") }}</h1>
-        <h2 class="title2">{{ $t("welcome.headline2") }}</h2>
+        <h2 class="title2 animate_color_gradient">{{ $t("welcome.headline2") }}</h2>
         <h3 class="title3 mt3">{{ $t("welcome.headline3") }}</h3>
       </div>
       <div class="guidance__arrow" @click="redirect('main', '#projects')">
-        <w-icon color="white">mdi mdi-arrow-down-bold-circle-outline</w-icon>
+        <w-icon class="animate_color_gradient">mdi mdi-arrow-down-bold-circle-outline</w-icon>
       </div>
     </div>
   </section>
@@ -36,12 +36,11 @@ section {
   height: 100vh;
 }
 div.image__container {
-  height: 110vh;
+  height: 100vh;
   width: 100vw;
   display: inline-block;
   z-index: 100;
   position: static;
-  text-align: center;
   font-family: "Roboto Condensed";
   background-image: linear-gradient(
       180deg,
@@ -52,19 +51,24 @@ div.image__container {
     ),
     url("../images/cover.webp");
   background-position: center;
-  background-attachment: fixed;
   filter: saturate(1.8);
   background-size: cover;
 
   @media only screen and (max-width: 1100px) {
     font-size: 1rem;
+    background-image: linear-gradient(
+      180deg,
+      rgb(0, 0, 0, 0.95) 0.33%,
+      rgba(0, 0, 0, 0.823) 40%,
+      rgb(0, 0, 0) 99.77%
+    ),
+    url("../images/cover.webp");
   }
 
   .main__icon {
-    top: 30%;
-    left: 25vw;
-    position: fixed;
-    font-size: 8rem;
+    top: 20%;
+    left: 35vw;
+    font-size: 5rem;
     animation: fadeRight 1s ease-in-out forwards;
     @media only screen and (min-width: 2100px) {
       top: 15%;
@@ -101,7 +105,6 @@ div.image__container {
     }
 
     h1 {
-      color: white;
       animation: fadeDown 1s ease-in-out forwards;
       font-size: 2rem;
       @media only screen and (min-width: 2100px) {
@@ -113,7 +116,7 @@ div.image__container {
     }
     h2 {
       font-size: 4rem;
-      animation: fadeLeft 1s ease-in-out forwards;
+      animation: fadeLeft colorswitch 1s ease-in-out forwards;
       @media only screen and (min-width: 2100px) {
         font-size: 6rem;
       }
@@ -123,7 +126,6 @@ div.image__container {
     }
 
     h3 {
-      color: white;
       font-size: 1.5rem;
       animation: fadeUp 1s ease-in-out forwards;
       max-width: 600px;

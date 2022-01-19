@@ -13,7 +13,7 @@ const i18n = createI18n({
         },
         welcome: {
           headline: "Mirza Malkoc",
-          headline2: "Web Entwickler",
+          headline2: "Webentwickler",
           headline3: "Ich bin ein Webentwickler aus Wien, Österreich. Auch wenn ich eigentlich eine Ausbildung als Oberflächentechniker abgeschlossen habe, ist Programmieren meine Leidenschaft und mein Karriereweg. Das Entwickeln von Applikationen begeistert mich jeden Tag aufs neue.",
           button: "Projekte",
         },

@@ -1,7 +1,7 @@
 <template>
   <div class="page__container" id="#projects">
     <div class="page__header">
-      <h2>{{ $t("projects.headline") }}</h2>
+      <h2 class="animate_color_gradient">{{ $t("projects.headline") }}</h2>
     </div>
     <div class="page__body bd3 bdrs1">
       <w-button
@@ -137,7 +137,6 @@ div.page__container {
     display: block;
     h2 {
       font-size: 3rem;
-      text-shadow: -3px 3px 3px black;
       @media only screen and (min-width: 2100px) {
         font-size: 5rem;
       }

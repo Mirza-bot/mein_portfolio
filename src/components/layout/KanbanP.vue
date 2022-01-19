@@ -100,7 +100,7 @@ span.headline {
 
 .link__button {
   transform: scale(2);
-  margin-bottom: 2rem;
+  margin-bottom: 15px;
   @media only screen and (min-width: 2100px) {
     transform: scale(3);
     margin-bottom: 50px;

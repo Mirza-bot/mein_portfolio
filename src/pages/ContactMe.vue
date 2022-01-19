@@ -61,10 +61,10 @@
             outline
             type="text"
             name="message"
-            :placeholder="$t('contact.messageLabel')"
-            bg-color="black"
             v-model="clientData.clientMessage"
-          ></w-textarea>
+            bg-color="black"
+            color="white"
+          >{{$t('contact.messageLabel')}}</w-textarea>
           <w-button
             color="white"
             class="submit__button"
@@ -109,18 +109,20 @@ export default {
   methods: {
     checkForm() {
       if (
-        this.clientData.clientEmail === "" ||
+        (this.clientData.clientEmail === "" || typeof this.clientData.clientEmail !== "string") ||
         !this.clientData.clientEmail.includes("@")
       ) {
         return false;
       } else if (
-        this.clientData.clientName === "" ||
-        this.clientData.clientMessage === ""
+        (this.clientData.clientName === "" || typeof this.clientData.clientName !== "string") ||
+        (this.clientData.clientMessage === "" || typeof this.clientData.clientMessage !== "string")
       ) {
         return false;
-      } else return true;
+      } else if ( typeof this.clientData.clientNumber !== "string") return false 
+      else return true;
     },
     async submitForm() {
+      console.log(typeof this.clientData.clientNumber)
       this.clientData.date = this.getDate();
       if (this.checkForm() === false) return;
       else {
@@ -182,7 +184,6 @@ div.form__card {
   margin: 5vh auto;
   color: black;
   background-color: white;
-  border: 2px solid;
   border-radius: 10px;
   caret-color: black;
   @media only screen and (min-width: 2100px) {

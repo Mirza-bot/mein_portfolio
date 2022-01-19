@@ -34,23 +34,34 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
-// Cover Transition
-.cover-enter-from {
-  opacity: 0.1;
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 
-.cover-enter-active {
-  transition: all 0.6s ease-in;
+.animate_color_gradient {
+  color: transparent;
+  background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f38c13);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation:  colorswitch 7s linear infinite;
+  -webkit-background-size: 500%;
+  background-size: 500%;
 }
 
-.cover-leave-to {
-  transform: translateY(200vh);
-  opacity: 0.1;
+@keyframes colorswitch {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+  
 }
 
-.cover-leave-active {
-  transition: all 0.5s ease-in;
-}
 </style>
