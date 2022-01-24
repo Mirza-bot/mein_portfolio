@@ -6,7 +6,9 @@
     <div class="page__body bd3 bdrs1">
       <div style="color: black; font-size: 2rem">
         <span>
-          <w-icon style="margin: -5px -10px 0 0"> mdi mdi-arrow-up-bold-box-outline </w-icon>
+          <w-icon style="margin: -5px -10px 0 0">
+            mdi mdi-arrow-up-bold-box-outline
+          </w-icon>
           {{ $t("projects.latest") }}</span
         >
       </div>
@@ -169,15 +171,13 @@ button.project__button {
 
 div.overlay__container {
   position: absolute;
-  top: 50px;
   left: auto;
-  width: 1000px;
+  max-width: 50vw;
   @media only screen and (max-width: 1100px) {
-    width: 99vw;
-    top: 2vh;
+    max-width: 70vw;
   }
-  @media only screen and (min-width: 2100px) {
-    max-width: 1400px;
+  @media only screen and (max-width: 700px) {
+    max-width: 99vw;
     top: 2vh;
   }
 }

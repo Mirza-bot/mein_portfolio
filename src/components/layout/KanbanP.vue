@@ -78,13 +78,12 @@ ul {
   @media only screen and (min-width: 1100px) {
     margin-top: 20px;
   }
-    @media only screen and (max-width: 1100px) {
-    
-      li {
-        float: left;
-        margin-right: 5px;
-        }
+  @media only screen and (max-width: 1100px) {
+    li {
+      float: left;
+      margin-right: 5px;
     }
+  }
 }
 
 span.title2 {
@@ -99,7 +98,7 @@ span.headline {
 }
 
 .link__button {
-  transform: scale(2);
+  transform: scale(1.5);
   margin-bottom: 15px;
   @media only screen and (min-width: 2100px) {
     transform: scale(3);
@@ -118,4 +117,5 @@ div.project__header {
 div.project__container {
   background-color: rgb(255, 255, 255);
 }
+
 </style>
