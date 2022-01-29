@@ -1,4 +1,85 @@
 <template>
+  <Particles
+    id="particles"
+    :options="{
+      fpsLimit: 90,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: true,
+            mode: 'push',
+          },
+          onHover: {
+            enable: true,
+            mode: 'repulse',
+          },
+          resize: true,
+        },
+        modes: {
+          bubble: {
+            distance: 620,
+            size: 1.2,
+            duration: 9,
+            opacity: 0.5,
+            speed: 3
+          },
+          push: {
+            particles_nb: 0.5
+          },
+          repulse: {
+            distance: 100,
+            duration: 5
+          }
+        },
+      },
+      particles: {
+        color: {
+          value: '#000000',
+        },
+        links: {
+          color: '#ffffff',
+          distance: 200,
+          enable: true,
+          opacity: 0.5,
+          width: 0.5,
+        },
+        collisions: {
+          enable: true,
+        },
+        move: {
+          direction: 'none',
+          enable: true,
+          outMode: 'bounce',
+          random: true,
+          speed: 0.5,
+          straight: false,
+          attract: {
+            enable: true,
+            rotateX: 880,
+            rotateY: 6800
+          }
+        },
+        number: {
+          density: {
+            enable: true,
+            area: 2000,
+          },
+          value: 80,
+        },
+        opacity: {
+          value: 0.5,
+        },
+        shape: {
+          type: 'circle',
+        },
+        size: {
+          value: 0.4,
+          random: true,
+        },
+      },
+      detectRetina: true,
+    }"
+  />
   <w-app>
     <main>
       <welcome></welcome>
@@ -13,29 +94,26 @@
 import TheHeader from "./components/layout/TheHeader.vue";
 import Welcome from "./pages/Welcome.vue";
 import StickyNavbar from "./components/layout/StickyNavbar.vue";
-import { computed } from '@vue/reactivity';
+import { computed } from "@vue/reactivity";
 export default {
   components: { TheHeader, Welcome, StickyNavbar },
-    setup() {
-
-
-    const windowWidth = window.innerWidth
+  setup() {
+    const windowWidth = window.innerWidth;
 
     const mobileScreen = computed(() => {
       if (windowWidth < 1100) {
-        return false
-      } else return true
-    })
+        return false;
+      } else return true;
+    });
 
     return {
       mobileScreen,
-    }
-  }
+    };
+  },
 };
 </script>
 
 <style lang="scss">
-
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
@@ -43,10 +121,16 @@ export default {
 
 .animate_color_gradient {
   color: transparent;
-  background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f38c13);
+  background-image: linear-gradient(
+    to left,
+    #2ecc71,
+    #3498db,
+    #9b59b6,
+    #f38c13
+  );
   background-clip: text;
   -webkit-background-clip: text;
-  animation:  colorswitch 7s linear infinite;
+  animation: colorswitch 7s linear infinite;
   -webkit-background-size: 500%;
   background-size: 500%;
 }
@@ -61,7 +145,5 @@ export default {
   100% {
     background-position: 0% 100%;
   }
-  
 }
-
 </style>

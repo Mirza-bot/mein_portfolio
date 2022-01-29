@@ -6,7 +6,7 @@
         <p>
           <w-icon class="mr1" xl color="white">
             mdi mdi-monitor-cellphone </w-icon
-          >Web-Developer/Front-End-Developer
+          >Web-Developer
         </p>
       </div>
       <div class="other__links ml3" v-if="!mobileMenu">

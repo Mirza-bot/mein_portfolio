@@ -7,7 +7,7 @@
     </div>
     <div class="aboutme_background">
       <w-flex wrap class="text-center">
-        <div class="person__container mxa py12">
+        <div class="person__container mxa py1">
           <img
             class="person__image bdrsm bd6 sh5"
             src="../images/Mirza.webp"
@@ -200,25 +200,8 @@ ul.name_plate {
   font-size: 1.5rem;
 }
 
-.aboutme_background {
-  background: radial-gradient(
-      circle,
-      rgba(0, 0, 0, 0.7) 50%,
-      rgba(0, 0, 0, 1) 60%
-    ),
-    url("../images/Vienna.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 5px solid white;
-}
-
-div.about_me_text {
-  background-color: rgba(0, 0, 0, 0.609);
-}
-
 p.personal__text {
   font-size: 1.5rem;
-  border-top: 5px solid white;
   padding: 10px;
   @media only screen and (min-width: 2100px) {
     font-size: 3rem;

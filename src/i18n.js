@@ -14,7 +14,7 @@ const i18n = createI18n({
         welcome: {
           headline: "Mirza Malkoc",
           headline2: "Webentwickler",
-          headline3: "Ich bin ein Webentwickler aus Wien, Österreich. Auch wenn ich eigentlich eine Ausbildung als Oberflächentechniker abgeschlossen habe, ist Programmieren meine Leidenschaft und mein Karriereweg. Das Entwickeln von Applikationen begeistert mich jeden Tag aufs neue.",
+          headline3: "Ich bin ein Webentwickler aus Wien, Österreich. Programmieren ist meine Leidenschaft und mein Karriereweg. Das Entwickeln von Applikationen begeistert mich jeden Tag aufs neue.",
           button: "Projekte",
         },
         projects: {
@@ -86,7 +86,7 @@ const i18n = createI18n({
         welcome: {
           headline: "Mirza Malkoc",
           headline2: "web developer",
-          headline3: "I'm a web developer from Vienna, Austria. Even though I actually completed my training as a surface technician, programming is my passion and my career path. The development of applications inspires me anew every day.",
+          headline3: "I'm a web developer from Vienna, Austria. Coding is my passion and my career path. The development of applications inspires me anew every day.",
           button: "Projects",
         },
         projects: {

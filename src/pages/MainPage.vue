@@ -15,22 +15,3 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-//route Transitions
-
-.route-enter-from {
-  opacity: 0;
-}
-
-.route-enter-active {
-  transition: all 0.3s ease-in-out;
-}
-
-.route-leave-to {
-  opacity: 0;
-}
-
-.route-leave-active {
-  transition: all 0.2s ease-in-out;
-}
-</style>
