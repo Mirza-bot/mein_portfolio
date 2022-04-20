@@ -10,9 +10,7 @@
         <h3 class="title3 mt3">{{ $t("welcome.headline3") }}</h3>
       </div>
       <div class="guidance__arrow" @click="redirect('main', '#projects')">
-        <w-icon class="animate_color_gradient"
-          >mdi mdi-arrow-down-bold-circle-outline</w-icon
-        >
+        <w-icon>mdi mdi-arrow-down-bold-circle-outline</w-icon>
       </div>
     </div>
   </section>
@@ -41,7 +39,6 @@ div.image__container {
   width: 100vw;
   display: inline-block;
   z-index: 100;
-  position: static;
   font-family: "Roboto Condensed";
   background-position: center;
   filter: saturate(1.8);
@@ -51,12 +48,12 @@ div.image__container {
     font-size: 1rem;
   }
   .main__icon {
-    top: 20%;
+    top: 25vh;
     left: 35vw;
     font-size: 5rem;
     animation: fadeRight 1s ease-in-out forwards;
     @media only screen and (min-width: 2100px) {
-      top: 13%;
+      top: 13vh;
       left: 21vw;
       font-size: 15rem;
     }
@@ -66,25 +63,16 @@ div.image__container {
   }
 
   div.front__font {
-    position: absolute;
-    display: inline-block;
-    top: 30%;
-    left: 35vw;
+    margin-top: 25vh;
+    margin-left: 32vw;
     caret-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    -ms-user-select: none;
-    text-align: start;
     overflow: hidden;
     @media only screen and (max-width: 1100px) {
-      top: 30%;
-      left: 10vw;
+      margin-top: 25vh;
+      margin-left: 5vw;
     }
     @media only screen and (min-width: 2100px) {
-      left: 21vw;
+      margin-left: 21vw;
     }
 
     h1 {

@@ -26,18 +26,6 @@
           <p class="personal__text">
             {{ $t("aboutMe.personalText") }}
           </p>
-          <div class="resumee__download bdrs1">
-            <strong class="ml3">{{ $t("aboutMe.resume") }}</strong>
-            <a
-              :href="Resume"
-              download="Malkoc_Mirza_Lebenslauf.pdf"
-            >
-              <w-button class="download__button ml3 bdrs1" bg-color="black"
-                ><w-icon class="mr2" color="white">mdi mdi-download</w-icon
-                ><span> Download </span>
-              </w-button>
-            </a>
-          </div>
         </div>
       </w-flex>
     </div>
@@ -75,7 +63,7 @@ import WaveImg from "../images/wave-ui.webp";
 import SEOImg from "../images/SEO.jpg";
 import GitImg from "../images/Git-Icon.png";
 import RespImg from "../images/Responsive.png";
-import Resume from "../assets/documents/Mirza's public Resume.pdf"
+import Resume from "../assets/documents/Mirza's public Resume.pdf";
 export default {
   setup() {
     const badges = [
@@ -91,7 +79,7 @@ export default {
 
     return {
       badges,
-      Resume
+      Resume,
     };
   },
 };

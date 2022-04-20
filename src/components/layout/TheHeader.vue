@@ -290,11 +290,16 @@ nav {
   font-size: 1rem;
   @media only screen and (min-width: 2100px) {
     width: 2300px;
-    top: 2vh;
   }
   @media only screen and (max-width: 1100px) {
     font-size: 0.8rem;
     width: 100%;
+  }
+  @media only screen and (min-width: 1100px) {
+    background-color: $mainColor;
+    backdrop-filter: blur(8px) saturate(10%) contrast(150%) brightness(30%);
+    -webkit-backdrop-filter: blur(8px) saturate(80%) contrast(150%)
+      brightness(30%);
   }
 }
 div.icon {

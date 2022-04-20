@@ -21,15 +21,15 @@
             size: 1.2,
             duration: 9,
             opacity: 0.5,
-            speed: 3
+            speed: 3,
           },
           push: {
-            particles_nb: 0.5
+            particles_nb: 0.5,
           },
           repulse: {
             distance: 100,
-            duration: 5
-          }
+            duration: 5,
+          },
         },
       },
       particles: {
@@ -56,8 +56,8 @@
           attract: {
             enable: true,
             rotateX: 880,
-            rotateY: 6800
-          }
+            rotateY: 6800,
+          },
         },
         number: {
           density: {
@@ -83,7 +83,6 @@
   <w-app>
     <main>
       <welcome></welcome>
-      <sticky-navbar v-show="mobileScreen"></sticky-navbar>
       <the-header></the-header>
       <router-view></router-view>
     </main>
