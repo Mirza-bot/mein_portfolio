@@ -52,7 +52,6 @@
           <li>
             <w-button
               class="nav__button"
-              outline
               color="white"
               @click="redirect('main', '#projects')"
               ><span
@@ -65,7 +64,6 @@
           <li>
             <w-button
               class="nav__button"
-              outline
               color="white"
               @click="redirect('main', '#aboutme')"
               ><span
@@ -78,7 +76,6 @@
           <li>
             <w-button
               class="nav__button"
-              outline
               color="white"
               @click="redirect('main', '#contactme')"
               ><span

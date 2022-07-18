@@ -2,7 +2,7 @@
   <Particles
     id="particles"
     :options="{
-      fpsLimit: 90,
+      fpsLimit: 144,
       interactivity: {
         events: {
           onClick: {
@@ -34,13 +34,13 @@
       },
       particles: {
         color: {
-          value: '#000000',
+          value: '#ffffff',
         },
         links: {
           color: '#ffffff',
-          distance: 200,
-          enable: true,
-          opacity: 0.5,
+          distance: 150,
+          enable: false,
+          opacity: 0.7,
           width: 0.5,
         },
         collisions: {
@@ -54,17 +54,17 @@
           speed: 0.5,
           straight: false,
           attract: {
-            enable: true,
-            rotateX: 880,
-            rotateY: 6800,
+            enable: false,
+            rotateX: 100,
+            rotateY: 100,
           },
         },
         number: {
           density: {
             enable: true,
-            area: 2000,
+            area: 10000,
           },
-          value: 80,
+          value: 800,
         },
         opacity: {
           value: 0.5,

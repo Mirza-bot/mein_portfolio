@@ -1,6 +1,6 @@
 <template>
   <div class="page__container" id="#aboutme">
-    <div>
+    <div class="mb10">
       <h1 class="headline animate_color_gradient">
         {{ $t("aboutMe.headline") }}
       </h1>
@@ -9,7 +9,7 @@
       <w-flex wrap class="text-center">
         <div class="person__container mxa py1">
           <img
-            class="person__image bdrsm bd6 sh5"
+            class="person__image bdrs6 bd6 sh5"
             src="../images/Mirza.webp"
             alt="Portfolio Picture"
           />
@@ -22,18 +22,17 @@
             <li>{{ $t("aboutMe.livingIn") }}</li>
           </ul>
         </div>
-        <div class="about_me_text mxa">
+        <div class="about_me_text mxa mb12">
           <p class="personal__text">
             {{ $t("aboutMe.personalText") }}
           </p>
         </div>
       </w-flex>
     </div>
-    <div class="mt10">
+    <div class="my10">
       <h1 class="headline animate_color_gradient">
         {{ $t("aboutMe.headline2") }}
       </h1>
-      <w-divider color="white" />
     </div>
     <w-flex wrap class="text-center">
       <div class="md3 mxa my5 px6" v-for="badge in badges" :key="badge.name">
@@ -165,15 +164,8 @@ img.person__image {
   }
 }
 
-div.about_me_skills {
-  font-size: 1.5rem;
-  @media only screen and (min-width: 2100px) {
-    font-size: 3rem;
-  }
-}
-
 span.name_plate {
-  font-size: 2.5rem;
+  font-size: 2rem;
   white-space: nowrap;
   @media only screen and (min-width: 2100px) {
     font-size: 4rem;
@@ -185,7 +177,7 @@ span.name_plate {
 
 ul.name_plate {
   text-align: start;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 p.personal__text {

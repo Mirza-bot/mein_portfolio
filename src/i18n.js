@@ -14,7 +14,7 @@ const i18n = createI18n({
         headline: "Mirza Malkoc",
         headline2: "Webentwickler",
         headline3:
-          "Das entwickeln und gestalten von Webseiten ist meine Leidenschaft. Ich kümmere mich um ihre Onlinepräsenz, damit Sie sich auf das Wesentliche fokussieren können. ",
+          "Das entwickeln und gestalten von Webseiten ist meine Leidenschaft. Mich jeden Tag neuen Herausforderungen zu stellen motiviert mich dabei mein Wissen und meine Fähigkeiten auszubauen.",
         button: "Projekte",
       },
       projects: {
@@ -23,7 +23,7 @@ const i18n = createI18n({
         description: "Beschreibung:",
         project1: {
           descriptionContent:
-            'Kanban ist eine Web-App welche mittels JavaScript, Vue3, Vue-Router und VueX erstellt wurde. Als Backend wird Firebase mit ihrer Realtime-Database genutzt, dies ermöglicht Authentifizierungsfunktionen und das Speichern der eigenen "Task-Karten", für jeden Nutzer der sich registriert. Mittels der "Drag & Drop"-API können die Karten zwischen den einzelnen Kategorien verschoben werden. Das Löschen und Editieren der Karten ist ebenfalls möglich.',
+            'Eine Web-App welche mittels JavaScript, Vue3, Vue-Router und VueX erstellt wurde. Als Backend wird Firebase mit ihrer Realtime-Database genutzt, dies ermöglicht Authentifizierungsfunktionen und das Speichern der eigenen "Task-Karten", für jeden Nutzer der sich registriert. Mittels der "Drag & Drop"-API können die Karten zwischen den einzelnen Kategorien verschoben werden. Das Löschen und Editieren der Karten ist ebenfalls möglich.',
           responsive: "Nein",
         },
         project2: {
@@ -42,6 +42,12 @@ const i18n = createI18n({
           descriptionContent:
             "Die Portfolio-Webseite auf der Sie sich befinden wurde mit JavaScript, Vue.js, Vue-Router, Sass und Wave-UI erstellt.",
           responsive: "Ja",
+        },
+        project5: {
+          title: "PixelArt Zeichenbrett",
+          descriptionContent:
+            "Ein Zeichenbrett mit Raster welches mit JavaScript, HTML und CSS gemacht wurde. Es diente als gute Übung dieses Projekt ohne Framework zu erstellen. Die Anzahl an Elementen im Raster vom Nutzer bestimmen zu lassen war die einzige kleine Hürde an diesem Projekt.",
+          responsive: "Nein",
         },
       },
       aboutMe: {
@@ -87,7 +93,7 @@ const i18n = createI18n({
         headline: "Mirza Malkoc",
         headline2: "web developer",
         headline3:
-          "Developing and designing websites is my passion. I take care of your online presence, so that you can focus on what matters most for your business.",
+          "Developing and designing websites is my passion. Facing new challenges every day motivates me to expand my knowledge and skills.",
         button: "Projects",
       },
       projects: {
@@ -96,7 +102,7 @@ const i18n = createI18n({
         description: "Description:",
         project1: {
           descriptionContent:
-            'Kanban is a web-app that was created using JavaScript ,Vue3, Vue-Router and VueX. Firebase with its real-time database is used as the backend, this enables authentification functions and the saving of individual "task-cards", for each user who registers. The cards can be moved between the individual categories using the "Drag & Drop"-API. It is also possible to delete and edit the cards.',
+            'A web-app that was created using JavaScript ,Vue3, Vue-Router and VueX. Firebase with its real-time database is used as the backend, this enables authentification functions and the saving of individual "task-cards", for each user who registers. The cards can be moved between the individual categories using the "Drag & Drop"-API. It is also possible to delete and edit the cards.',
           responsive: "No",
         },
         project2: {
@@ -115,6 +121,12 @@ const i18n = createI18n({
           descriptionContent:
             "The portfolio-website you are currently on was created using JavaScript, Vue.js, Vue-Router, Sass and Wave-UI.",
           responsive: "Yes",
+        },
+        project5: {
+          title: "PixelArt Drawingboard",
+          descriptionContent:
+            "A grid drawing board made with JavaScript, HTML and CSS. It served as good practice to create this project without a framework. Letting the user choose the number of elements in the grid was the only minor hurdle in this project.",
+          responsive: "No",
         },
       },
       aboutMe: {

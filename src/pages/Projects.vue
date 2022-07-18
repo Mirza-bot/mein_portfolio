@@ -3,21 +3,39 @@
     <div class="page__header">
       <h2 class="animate_color_gradient">{{ $t("projects.headline") }}</h2>
     </div>
-    <div class="page__body bd3 bdrs1">
-      <div style="color: black; font-size: 2rem">
-        <span>
-          <w-icon style="margin: -5px -10px 0 0">
-            mdi mdi-arrow-up-bold-box-outline
-          </w-icon>
-          {{ $t("projects.latest") }}</span
-        >
-      </div>
+    <div class="bd3 bdrs1">
+      <w-button
+        class="project__button"
+        bg-color="black"
+        dark
+        @click="showOverlay5 = true"
+      >
+        <img src="../images/PixelArtDB.png" alt="" />
+        {{ $t("projects.project5.title") }}
+      </w-button>
+
+      <w-overlay v-model="showOverlay5" bg-color="rgba(0, 0, 0, 0.9)">
+        <div class="overlay__container">
+          <w-button
+            class="close__overlay"
+            bg-color="white"
+            color="black"
+            lg
+            dark
+            @click="showOverlay5 = false"
+          >
+            <w-icon>wi-cross</w-icon>
+          </w-button>
+          <PixelArtP></PixelArtP>
+        </div>
+      </w-overlay>
       <w-button
         class="project__button"
         bg-color="black"
         dark
         @click="showOverlay4 = true"
       >
+        <img src="../images/portfoliopic.webp" alt="" />
         {{ $t("projects.project4.title") }}
       </w-button>
 
@@ -42,6 +60,8 @@
         dark
         @click="showOverlay3 = true"
       >
+        <img id="salarycalc_img" src="../images/lohnrechner.webp" alt="" />
+
         {{ $t("projects.project3.title") }}
       </w-button>
 
@@ -66,7 +86,8 @@
         dark
         @click="showOverlay2 = true"
       >
-        Kanbanboard App
+        <img src="../images/Kanbanimage.png" alt="" />
+        Todolist
       </w-button>
 
       <w-overlay v-model="showOverlay2" bg-color="rgba(0, 0, 0, 0.9)">
@@ -90,6 +111,7 @@
         dark
         @click="showOverlay1 = true"
       >
+        <img src="../images/pietrosimage.png" alt="" />
         Pietros Pizzeria
       </w-button>
 
@@ -117,13 +139,15 @@ import KanbanPVue from "../components/layout/KanbanP.vue";
 import PietrosP from "../components/layout/PietrosP.vue";
 import LohnrechnerP from "../components/layout/LohnrechnerP.vue";
 import PortfolioP from "../components/layout/PortfolioP.vue";
+import PixelArtP from "../components/layout/PixelArtP.vue";
 export default {
-  components: { KanbanPVue, PietrosP, LohnrechnerP, PortfolioP },
+  components: { KanbanPVue, PietrosP, LohnrechnerP, PortfolioP, PixelArtP },
   data: () => ({
     showOverlay1: false,
     showOverlay2: false,
     showOverlay3: false,
     showOverlay4: false,
+    showOverlay5: false,
   }),
 };
 </script>
@@ -155,17 +179,38 @@ div.page__container {
   }
 }
 
-div.page__body {
-  background-color: white;
-}
-
 button.project__button {
-  width: 90%;
-  height: 50px;
-  margin: 20px 5%;
+  margin: 20px;
+  height: 155px;
+  width: 45%;
   font-size: 1.5rem;
   @media only screen and (min-width: 2100px) {
-    font-size: 2rem;
+    font-size: 3rem;
+    height: 500px;
+  }
+  @media only screen and (max-width: 1100px) {
+    width: 100%;
+    height: 155px;
+    margin: 20px 0;
+  }
+  img {
+    width: 300px;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(40%);
+    @media only screen and (max-width: 1100px) {
+      width: 300px;
+    }
+    @media only screen and (min-width: 2100px) {
+      width: 900px;
+    }
+  }
+}
+
+#salarycalc_img {
+  width: 70px;
+  @media only screen and (min-width: 2100px) {
+    width: 230px;
   }
 }
 

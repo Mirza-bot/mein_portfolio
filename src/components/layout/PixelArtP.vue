@@ -1,14 +1,14 @@
 <template>
   <div class="bd2 bdrs1 project__container">
     <div class="project__header bdrst">
-      <span class="headline">Todolist</span>
+      <span class="headline">{{ $t("projects.project5.title") }}</span>
     </div>
     <w-card :image="`${projectImg1}`" bg-color="black" no-border>
       <w-flex wrap class="my5">
         <div class="md9">
           <span class="title2">{{ $t("projects.description") }}</span
           ><br /><br />
-          {{ $t("projects.project1.descriptionContent") }}
+          {{ $t("projects.project5.descriptionContent") }}
           <br />
           <br />
         </div>
@@ -16,11 +16,8 @@
           <span class="title2">Tools:</span>
           <ul class="mx5">
             <li><w-icon>mdi mdi-language-html5</w-icon>HTML5</li>
-            <li><w-icon l>mdi mdi-sass</w-icon>Sass</li>
+            <li><w-icon l>mdi mdi-language-css3</w-icon>Css</li>
             <li><w-icon l>mdi mdi-language-javascript</w-icon>JavaScript</li>
-            <li><w-icon l>mdi mdi-vuejs</w-icon>Vue.js</li>
-            <li>Vue-Router</li>
-            <li>Vuex</li>
             <li><w-icon l>mdi mdi-firebase</w-icon>Firebase</li>
           </ul>
         </div>
@@ -29,7 +26,7 @@
         <w-flex wrap class="text-center">
           <div class="xs6">
             <a
-              href="https://kanban-board-91d98.web.app/"
+              href="https://pixelartdrawingboard.web.app/"
               rel="noopener"
               target="_blank"
             >
@@ -41,7 +38,7 @@
           </div>
           <div class="xs6">
             <a
-              href="https://github.com/Mirza-bot/Kanban-board/tree/main/kanban-board"
+              href="https://github.com/Mirza-bot/PixelArtDB"
               rel="noopener"
               target="_blank"
             >
@@ -58,10 +55,10 @@
 </template>
 
 <script>
-import KanbanImg from "../../images/kanban.webp";
+import PixelArtDB from "../../images/PixelArtDB.png";
 export default {
   data: () => ({
-    projectImg1: KanbanImg,
+    projectImg1: PixelArtDB,
   }),
 };
 </script>
